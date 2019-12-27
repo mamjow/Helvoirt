@@ -1,0 +1,59 @@
+{% extends 'manager/modiriat.html' %}
+{% include "manager/newpost.html" %}
+{% load static %}
+{% block javascript %}
+    <script src="{% static 'js/newpost.js' %}"></script>
+{% endblock %}
+{% block adminmainpanel %}
+    <div class="col">
+        <table class="table" id="book-table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Header</th>
+                <th>Date</th>
+                <th>Author</th>
+                <th>Type</th>
+                <th>Category</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for object in posts %}
+                <tr>
+                    <td>{{ object.post_title }}</td>
+                    <td>{{ object.post_header }}</td>
+                    <td>{{ object.post_time }}</td>
+                    <td>{{ object.post_author }}</td>
+                    <td>{{ object.post_type }}</td>
+                    <td>{{ object.post_category }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="7" class="text-center bg-warning">No book</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
+{% block adminsidepanel %}
+    <div class="col m-3">
+        <button type="button" class="btn btn-primary js-create-book" id="asspostjadid">
+            <span class="glyphicon glyphicon-plus"></span>
+            New book
+        </button>
+    </div>
+
+    <div class="modal fade" id="modal-book">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+
+
+
+
+{% endblock %}
+
+

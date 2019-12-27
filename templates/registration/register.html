@@ -1,0 +1,75 @@
+{% load static %}
+{% block content %}
+    <div class="modal fade" id="SignUpModal" tabindex="-1" role="dialog" aria-labelledby="SignUpModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SignUpModalLabel">Aanmelden bij HelvoirThuis</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="'form-horizontal" id="SignUpForm" method="POST"
+                          data-validate-existing-username-url="{% url 'validate_existingusername' %}">
+                        {% csrf_token %}
+                        <div class="form-group row">
+                            <label class="col-lg-4 control-label" for="NewUserEmail">Email:</label>
+                            <div class="col-lg-6">
+                                <input type="Email" class="form-control e" id="NewUserEmail" name="NewUserEmail"
+                                       placeholder="Email">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-4 control-label" for="NewUserName">Username:</label>
+                            <div class="col-lg-6">
+                                <input type="username" class="form-control" id="NewUserName"
+                                       name="NewUserName"
+                                       placeholder="Username">
+                                <div class="invalid-feedback" id="username-errors" style="display: none">
+                                Please choose a valid username.
+                            </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-4 control-label" for="NewUserPass1">Password:</label>
+                            <div class="col-lg-6">
+                                <input type="password" class="form-control" id="NewUserPass1" name="NewUserPass1"
+                                       placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-4 control-label" for="NewUserPass2">Retype Password:</label>
+                            <div class="col-lg-6">
+                                <input type="password" class="form-control" id="NewUserPass2" name="NewUserPass2"
+                                       placeholder="Password">
+                            </div>
+                        </div>
+                        <div id="register-errors" class="alert alert-danger" role="alert" style="display: none">
+                            <span><p>Ops. something went wrong!</p></span>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" id="register-button"><span
+                                    id="register-button-msg">Aanmelden</span> <i id="register-button-icon"
+                                                                                 class="fas fa-user-plus"></i>
+
+
+                            </button>
+
+                        </div>
+                    </form>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block javascript %}
+
+{% endblock %}
