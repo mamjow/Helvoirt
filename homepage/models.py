@@ -3,7 +3,6 @@ from django.utils import timezone
 from django.urls import reverse
 from django.template.defaultfilters import slugify
 from accounts.models import CustomUser
-from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
 

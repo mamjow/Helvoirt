@@ -126,7 +126,7 @@ STATICFILES_DIRS = [
     '/static/',
 ]
 STATIC_URL = '/static/'
-# STATIC_ROOT = 'deply/static/'
+STATIC_ROOT = 'staticroot/static/'
 CKEDITOR_UPLOAD_PATH = 'ckuploads/'
 
 CKEDITOR_CONFIGS = {
