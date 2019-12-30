@@ -1,7 +1,7 @@
 from rest_framework import generics
 from .serializers import BlogPostSerializer
 from rest_framework.permissions import IsAdminUser
-from Homepage.models import BlogPost
+from homepage.models import BlogPost
 
 
 class BlogListAPI(generics.ListCreateAPIView):

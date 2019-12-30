@@ -1,11 +1,6 @@
 $(document).ready(function () {
     $('#register-button').click(function () {
 
-        var NewUsername = $('#NewUserName').val();
-        var password1 = $('#NewUserPass1').val();
-        var password2 = $('#NewUserPass2').val();
-        var NewUserEmail = $('#NewUserEmail').val;
-        let UserError = $('#username-errors');
         var register_button = $('#register-button-msg');
         register_button.html('Aanmelden ...');
 
@@ -13,9 +8,16 @@ $(document).ready(function () {
         register_icon.removeClass(' fa-user-plus').addClass('fa-spinner fa-spin');
 
         $('#SignUpForm').submit(function (e) {
-
+            var NewUserName = $('#NewUserName').val();
+            var password1 = $('#NewUserPass1').val();
+            var password2 = $('#NewUserPass2').val();
+            var NewUserEmail = $('#NewUserEmail').val();
+            var UserError = $('#username-errors');
             var register_button = $('#register-button-msg');
             var register_icon = $('#register-button-icon');
+            var ajax_err = $('#register-errors');
+            $("#email-errors").css('display', 'none');
+            $("#password-errors").css('display', 'none');
 
             event.preventDefault();
             var form = $(this).closest("form");
@@ -26,22 +28,26 @@ $(document).ready(function () {
                 dataType: 'json',
                 success: function () {
                     UserError.css('display', 'none');
+                    console.log('vlidate shod', NewUserEmail, NewUserName, password2, password1);
                     $.ajax({
-                        url: '/signup/',
                         type: "POST", // GET or POST
+                        url: '/signup/',
                         data: {
-                            username: NewUsername,
-                            password: password1,
-                            'csrfmiddlewaretoken': csrfmiddlewaretoken
+                            username: NewUserName,
+                            email: NewUserEmail,
+                            password1: password1,
+                            password2: password2,
+                            'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val(),
                         },
-                        success: function (signup_response) {
-                            if (signup_response.message == "Success") {
-
+                        success: function (data) {
+                            console.log(data.message);
+                            if (data['message'] == "Success") {
+                                console.log('berim login ?');
                                 $.ajax({
-                                    type: "post",
+                                    type: "POST",
                                     url: '/login/',
                                     data: {
-                                        username: NewUsername,
+                                        username: NewUserName,
                                         password: password1,
                                         csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
                                     },
@@ -49,7 +55,7 @@ $(document).ready(function () {
                                         register_button.html('ingelogged');
                                         register_icon.removeClass('fa-spinner fa-spin').addClass(' fa-user-plus');
                                         $('#SignUpModal').modal('hide');
-                                        console.log(signup_response.message.toString());
+                                        console.log(data);
                                         location.reload();
                                     },
                                     error: function () {
@@ -61,30 +67,38 @@ $(document).ready(function () {
                                 })
 
                             }
+                            else {
 
-                            if (signup_response.message == "Password-must-match") {
-                                var ajax_err = $('#register-errors');
+                                if ("email" in data['message']) {
+                                    $("#email-errors").html(data['message']['email'][0]);
+                                    $("#email-errors").css('display', 'block');
+                                }
 
-                                ajax_err.css('display', 'block');
-                                ajax_err.find('span').html('Password must match');
+                                if ("password2" in data['message']) {
+                                    $("#password-errors").html(data['message']['password2'][0]);
+                                    $("#password-errors").css('display', 'block');
+                                }
+
                             }
+                            register_button.html('Aanmelden');
+                            register_icon.removeClass('fa-spinner fa-spin').addClass('fa-user-plus');
 
                         }, /* end of Success */
-                        error: function (signup_response) {
+                        error: function (data) {
+                            console.log(data.message);
                             var ajax_err = $('#register-errors');
                             ajax_err.css('display', 'block');
-                            ajax_err.find('span').html(signup_response.message)
-                            console.log(signup_response)
+                            ajax_err.find('span').html(data.message)
                         }/*  end of error */
                     });
                     /*./ajax*/
 
                 },
                 error: function () {
-                    var ajax_err = $('#register-errors');
+                    $('#username-errors').css('display', 'block');
                     ajax_err.css('display', 'block');
-                    ajax_err.find('span').html('Gebruikersnaam "' + Newusername + '" is al in gebruik. Probeer even een andere gebruikersnaam.');
-                    register_button.html('Aanmelden.');
+                    ajax_err.find('span').html('Gebruikersnaam "' + NewUserName + '" is al in gebruik. Probeer even een andere gebruikersnaam.');
+                    register_button.html('Aanmelden');
                     register_icon.removeClass('fa-spinner fa-spin').addClass('fa-user-plus');
 
                 }
@@ -94,7 +108,8 @@ $(document).ready(function () {
 
         });
 
-    })
+
+    });
 
 
     let logUser = document.getElementById('NewUserName');
@@ -105,24 +120,24 @@ $(document).ready(function () {
         var register_button = $('#register-button-msg');
         var register_icon = $('#register-button-icon');
         var form = $(this).closest("form");
-        var Newusername = $('#NewUserName').val();
+        var NewUserName = $('#NewUserName').val();
+        var ajax_err = $('#register-errors');
         $.ajax({
             url: form.attr("data-validate-existing-username-url"),
             data: form.serialize(),
             dataType: 'json',
-            success: function (response) {
+            success: function () {
                 {
-                    var ajax_err = $('#username-errors');
+                    $('#username-errors').css('display', 'none');
                     ajax_err.css('display', 'none');
 
                 }
 
             },
-            error: function (response) {
-                var ajax_err = $('#username-errors');
-                console.log('Username already exist.');
+            error: function () {
+                $('#username-errors').css('display', 'block');
                 ajax_err.css('display', 'block');
-                ajax_err.find('span').html('Gebruikersnaam "' + Newusername + '" is al in gebruik. Probeer even een andere gebruikersnaam.');
+                ajax_err.find('span').html('Gebruikersnaam "' + NewUserName + '" is al in gebruik. Probeer even een andere gebruikersnaam.');
                 register_button.html('Aanmelden');
                 register_icon.removeClass('fa-spinner fa-spin').addClass('fa-user-plus');
             }

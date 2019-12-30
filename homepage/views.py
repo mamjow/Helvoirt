@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render
 import os
 #from .forms import ContactUsForm
 #from .forms import NewPost
@@ -9,7 +9,7 @@ from django.contrib import messages
 
 
 def home(request):
-    template = "content/Homepage.html"
+    template = "content/homepage.html"
     qs = BlogPost.objects.all().order_by('post_time').reverse()
     ms = WebCategory.objects.all()
     path = "static/image"  # insert the path to your directory

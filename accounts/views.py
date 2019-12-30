@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from .forms import CustomUserCreationForm
 from django.contrib.auth import get_user_model, authenticate, login
-
+from django.shortcuts import redirect
 import json
 from django.http import HttpResponse
 
@@ -31,31 +31,23 @@ def login_user(request):
 
 
 def signup_user(request):
-    response_data = {}
-    if request.method == "POST" and request.is_ajax:
-        user_name = request.POST['NewUserName']
-        user_email = request.POST['NewUserEmail']
-        user_password = request.POST['NewUserPass1']
-        user_password2 = request.POST['NewUserPass2']
-        if user_password == user_password2:
-            user_username = user_name.replace(" ", "").lower()
-            new_user = User.objects.create(username=user_username, email=user_email,
-                                           )
-            new_user.set_password(user_password)
-
-            new_user.is_active = True
-            new_user.save()
-            log_user = authenticate(username=user_username, password=user_password)
-            # if log_user is not None:
-            # login(request, log_user)
-            response_data = {'message': 'Success'}
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        password1 = request.POST.get('password1')
+        password2 = request.POST.get('password2')
+        data = {'username': username, 'email': email, 'password2': password2, 'password1': password1}
+        form = CustomUserCreationForm(data=data)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.is_active = True
+            user.save()
+            return HttpResponse(json.dumps({"message": "Success"}), content_type="application/json")
         else:
-            response_data = {'message': 'Password-must-match'}
-
+            return HttpResponse(json.dumps({"message": form.errors}), content_type="application/json")
     else:
-        response_data = {'message': 'Failed'}
-        # logout(request)
-    return JsonResponse(response_data)
+        form = CustomUserCreationForm()
+    return HttpResponse(json.dumps({"message": "Denied"}), content_type="application/json")
 
 
 def validate_username(request):

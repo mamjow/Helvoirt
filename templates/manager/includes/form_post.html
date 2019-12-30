@@ -1,0 +1,57 @@
+{% load widget_tweaks %}
+{% csrf_token %}
+{{ form.media }}
+
+{#{% for field in form %}#}
+{#  <div class="form-group{% if field.errors %} has-error{% endif %}">#}
+{#    <label for="{{ field.id_for_label }}">{{ field.label }}</label>#}
+{#    {% render_field field class="form-control" %}#}
+{#    {% for error in field.errors %}#}
+{#      <p class="help-block">{{ error }}</p>#}
+{#    {% endfor %}#}
+{#  </div>#}
+{#{% endfor %}#}
+
+<div class="form-group row">
+    <div class="col-6">
+        <label for="PostTitleInput">Title:</label>
+        {{ form.post_title }}
+    </div>
+    <div class="col-6">
+        <label for="PostAuthorInput">Post Author:</label>
+        {#                        <input type="text" class="form-control" id="PostAuthorInput" placeholder="1" readonly>#}
+        {{ form.post_author }}
+
+    </div>
+</div>
+<div class="form-group {% if field.errors %} has-error{% endif %} row">
+    <div class="col-4">
+        <label for="PostImageInput">Post Cover:</label>
+        {{ form.post_images }}
+        <div class="invalid-feedback" id="PostImageInput-errors">
+            Please choose a valid username.
+        </div>
+    </div>
+    <div class="col-4">
+        <label for="PostCategoryInput">Post Category:</label>
+        {{ form.post_category }}
+    </div>
+    <div class="col-4">
+        <label for="PostCategoryInput">Post Type:</label>
+        {{ form.post_type }}
+    </div>
+</div>
+<div class="form-group row">
+    <div class="col-5">
+        {{ form.post_time }}
+    </div>
+    <div class="col-5">
+
+    </div>
+</div>
+<div class="form-group text-center">
+    <label for="PostBodyInput">Text body:</label>
+    <br>
+    {{ form.post_body }}
+
+</div>

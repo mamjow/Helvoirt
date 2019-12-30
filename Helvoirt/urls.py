@@ -18,24 +18,25 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.conf import settings
 from django.conf.urls.static import static
-from Homepage.Api.view import BlogListAPI
+from homepage.Api.view import BlogListAPI
 from accounts.views import login_user
-from Management.views import TemplateView
-
+from accounts.views import signup_user
+from management.views import TemplateView
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
                   path('ckeditor/', include('ckeditor_uploader.urls')),
                   url(r'^login/$', login_user, name='login'),
-                  url('', include('Homepage.urls')),
-                  url('home', include('Homepage.urls'), name='home-blog'),
+                  url(r'^signup/$', signup_user, name='signupuser'),
+                  url('', include('homepage.urls')),
+                  url('home', include('homepage.urls'), name='home-blog'),
                   path('accounts/', include('accounts.urls')),
-                  path('panel/', include('Management.urls')),
+                  path('panel/', include('management.urls')),
                   path('accounts/', include('django.contrib.auth.urls')),
                   path('home/api/', BlogListAPI.as_view()),
 
                   # REST
-                  # url('api/blog/', include('Homepage.api.urls'), 'blog_api'),
+                  # url('api/blog/', include('homepage.api.urls'), 'blog_api'),
                   # url('api/account/', include('accounts.api.urls'), 'account_api'),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

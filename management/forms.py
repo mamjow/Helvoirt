@@ -1,15 +1,15 @@
 import self as self
 from django.forms import ModelForm
-from Homepage.models import BlogPost
+from homepage.models import BlogPost
 from django import forms
 
 
 class AddPost(ModelForm):
     class Meta:
         model = BlogPost
-        fields = ['post_title', 'post_body', 'post_images', 'post_category', 'post_type', 'post_time',
-                  'post_author',
-                  ]
+        fields = ('post_title', 'post_images', 'post_category', 'post_type', 'post_time',
+                  'post_author', 'post_body',)
+
         # widgets = {
         #     'post_title': forms.TextInput(
         #         attrs={'class': 'form-control',

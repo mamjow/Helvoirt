@@ -48,7 +48,7 @@
 
         <div class="row">
             <!-------------------- Content  ----------->
-            <div class="col-9">
+            <div class="col-lg-9 col-xl-9 col-md-12 col-sm-12 ">
                 {% block content %}
                     {% for object in object_list %}
                         <div class="row m-2">
@@ -98,7 +98,7 @@
 
             </div>
             <!-------------------- Adv  ----------->
-            <div class="col-3">
+            <div class="col-lg-3 col-xl-3 hidden-sm hidden-md ">
                 {% block adver %}
                     {% for object in adv %}
                         <a class="float-right m-2" href="{{ object.adv_adres }}"> <img
@@ -106,7 +106,7 @@
                                 src="{{ object.adv_images.url }}"
                                 alt="Image"/></a>
                     {% endfor %}
-
+                    asd
                 {% endblock %}
             </div>
         </div>

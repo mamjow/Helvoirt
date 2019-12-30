@@ -10,7 +10,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('Homepage', '0001_initial'),
+        ('homepage', '0001_initial'),
     ]
 
     operations = [
@@ -23,11 +23,11 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='blogpost',
             name='post_category',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='Homepage.WebCategory'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='homepage.WebCategory'),
         ),
         migrations.AddField(
             model_name='blogpost',
             name='post_type',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='Homepage.PostType'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, to='homepage.PostType'),
         ),
     ]

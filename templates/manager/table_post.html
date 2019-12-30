@@ -1,9 +1,7 @@
 {% extends 'manager/modiriat.html' %}
-{% include "manager/newpost.html" %}
+{% include "manager/includes/newpost.html" %}
+
 {% load static %}
-{% block javascript %}
-    <script src="{% static 'js/newpost.js' %}"></script>
-{% endblock %}
 {% block adminmainpanel %}
     <div class="col">
         <table class="table" id="book-table">
@@ -18,42 +16,30 @@
             </tr>
             </thead>
             <tbody>
-            {% for object in posts %}
-                <tr>
-                    <td>{{ object.post_title }}</td>
-                    <td>{{ object.post_header }}</td>
-                    <td>{{ object.post_time }}</td>
-                    <td>{{ object.post_author }}</td>
-                    <td>{{ object.post_type }}</td>
-                    <td>{{ object.post_category }}</td>
-                </tr>
-            {% empty %}
-                <tr>
-                    <td colspan="7" class="text-center bg-warning">No book</td>
-                </tr>
-            {% endfor %}
+            {% include 'manager/includes/list_post.html' %}
             </tbody>
         </table>
     </div>
-{% endblock %}
-{% block adminsidepanel %}
-    <div class="col m-3">
-        <button type="button" class="btn btn-primary js-create-book" id="asspostjadid">
-            <span class="glyphicon glyphicon-plus"></span>
-            New book
-        </button>
-    </div>
 
-    <div class="modal fade" id="modal-book">
+    <div class="modal fade" id="NewPostModal">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content" style="width: 700px">
             </div>
         </div>
     </div>
 
+{% endblock %}
 
-
-
+{% block adminsidepanel %}
+    <div class="col m-3">
+        <p>
+            <button type="button" class="btn btn-primary" id="NewPostModalCall"
+                    data-url="{% url 'post_new' %}">
+                <span class="glyphicon glyphicon-plus"></span>
+                New Post
+            </button>
+        </p>
+    </div>
 {% endblock %}
 
 

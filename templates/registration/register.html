@@ -19,6 +19,9 @@
                             <div class="col-lg-6">
                                 <input type="Email" class="form-control e" id="NewUserEmail" name="NewUserEmail"
                                        placeholder="Email">
+                                <div class="invalid-feedback" id="email-errors" style="display: none">
+                                    Please choose a valid E-mail.
+                                </div>
                             </div>
                         </div>
 
@@ -29,8 +32,8 @@
                                        name="NewUserName"
                                        placeholder="Username">
                                 <div class="invalid-feedback" id="username-errors" style="display: none">
-                                Please choose a valid username.
-                            </div>
+                                    Please choose a valid username.
+                                </div>
                             </div>
 
                         </div>
@@ -47,6 +50,9 @@
                             <div class="col-lg-6">
                                 <input type="password" class="form-control" id="NewUserPass2" name="NewUserPass2"
                                        placeholder="Password">
+                                <div class="invalid-feedback" id="password-errors" style="display: none">
+                                    Please choose a valid Password.
+                                </div>
                             </div>
                         </div>
                         <div id="register-errors" class="alert alert-danger" role="alert" style="display: none">

@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from . import views
-from Homepage.views import post_details, gallery
+from homepage.views import post_details, gallery
 
 
 urlpatterns = [
