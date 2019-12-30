@@ -2,79 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd561a11-8182-4a4a-95fc-227f3d0aa33a" name="Default Changelist" comment="update js shit">
-      <change afterPath="$PROJECT_DIR$/templates/manager/includes/deletepost.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/manager/includes/form_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/manager/includes/list_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/manager/includes/newpost.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/manager/includes/updatepost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Helvoirt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Helvoirt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helvoirt/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Helvoirt/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Helvoirt/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Helvoirt/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/Api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/Api/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/Api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/Api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/Api/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/Api/view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/migrations/0002_auto_20191225_0040.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/migrations/0002_auto_20191225_0040.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Homepage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/migrations/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Management/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/ckuploads/2019/12/20/studio-hgf.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/ckuploads/2019/12/20/studio-hgf.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/1-1-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/1-1-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/13332807_134959023588293_5117736920101340720_n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/13332807_134959023588293_5117736920101340720_n.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/1779933-AyatollahKhameneiIranReuters-1534158743-665-640x480.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/1779933-AyatollahKhameneiIranReuters-1534158743-665-640x480.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/1779933-AyatollahKhameneiIranReuters-1534158743-665-640x480_nmFOSsT.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/1779933-AyatollahKhameneiIranReuters-1534158743-665-640x480_nmFOSsT.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/1779933-AyatollahKhameneiIranReuters-1534158743-665-640x480_nmFOSsT_v8tqFTQ.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/1779933-AyatollahKhameneiIranReuters-1534158743-665-640x480_nmFOSsT_v8tqFTQ.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/2416722.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/2416722.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/2416722_1W8gs8R.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/2416722_1W8gs8R.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/2416722_1W8gs8R_38Dz8TI.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/2416722_1W8gs8R_38Dz8TI.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/40445-13411406-IMG_8825_JPG2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/40445-13411406-IMG_8825_JPG2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/40445-13411406-IMG_8825_JPG2_eX0sL2u.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/40445-13411406-IMG_8825_JPG2_eX0sL2u.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/40445-13411406-IMG_8825_JPG2_pJpRpK4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/40445-13411406-IMG_8825_JPG2_pJpRpK4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/61077029_1939605322817705_6280433095283834880_n.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/61077029_1939605322817705_6280433095283834880_n.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/61077029_1939605322817705_6280433095283834880_n_tGp2edY.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/61077029_1939605322817705_6280433095283834880_n_tGp2edY.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/Boks_cl82MjB4MF9kXzFfcG5nXy9fYXNzZXQvX3ByaXZhdGUvbmV3cy85_839d0193.png" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/Boks_cl82MjB4MF9kXzFfcG5nXy9fYXNzZXQvX3ByaXZhdGUvbmV3cy85_839d0193.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/Debro-loodgieterswerken.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/Debro-loodgieterswerken.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/Studio-HGF.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/Studio-HGF.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/Toneel-poster-A3_cl82MjB4MF9kXzFfanBnXy9fYXNzZXQvX3ByaXZhdGUvbmV3cy85_c9632695.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/Toneel-poster-A3_cl82MjB4MF9kXzFfanBnXy9fYXNzZXQvX3ByaXZhdGUvbmV3cy85_c9632695.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/asdasd.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/asdasd.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/asdasd_BLxP9e3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/asdasd_BLxP9e3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/asdasd_fQemfFN.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/asdasd_fQemfFN.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/giphy.gif" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/giphy.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/here_is_donny.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/here_is_donny.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/img5_8FD1wJq.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/img5_8FD1wJq.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/img5_8FD1wJq_Ef9bVsv.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/img5_8FD1wJq_Ef9bVsv.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/op-de-rug_cl82MjB4MF9kXzFfanBnXy9fYXNzZXQvX3ByaXZhdGUvbmV3cy85_72e246ef_BQPmIwt__v3pHnzK.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/op-de-rug_cl82MjB4MF9kXzFfanBnXy9fYXNzZXQvX3ByaXZhdGUvbmV3cy85_72e246ef_BQPmIwt__v3pHnzK.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/op-de-rug_cl82MjB4MF9kXzFfanBnXy9fYXNzZXQvX3ByaXZhdGUvbmV3cy85_72e246ef_BQPmIwt_e1FTuWS.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/op-de-rug_cl82MjB4MF9kXzFfanBnXy9fYXNzZXQvX3ByaXZhdGUvbmV3cy85_72e246ef_BQPmIwt_e1FTuWS.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Media/uploads/putin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/uploads/putin.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/newpost.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/newpost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/content/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/add_post.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/modiriat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manager/modiriat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/newpost.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/table_post.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manager/table_post.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/update_post.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/management/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +52,7 @@
     <session id="321670066">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="45" />
+          <entry key="project.closed" value="46" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="13" />
           <entry key="project.open.time.5" value="21" />
@@ -147,6 +75,7 @@
           <entry key="png" value="1" />
           <entry key="py" value="231" />
           <entry key="txt" value="10" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -158,6 +87,7 @@
           <entry key="JavaScript" value="13" />
           <entry key="PLAIN_TEXT" value="12" />
           <entry key="Python" value="229" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -168,7 +98,7 @@
           <entry key="dummy" value="2" />
           <entry key="html" value="6299" />
           <entry key="js" value="602" />
-          <entry key="py" value="6734" />
+          <entry key="py" value="6735" />
           <entry key="py@Helvoirt" value="48" />
           <entry key="txt" value="61" />
         </counts>
@@ -180,7 +110,7 @@
           <entry key="HTML" value="6299" />
           <entry key="JavaScript" value="602" />
           <entry key="PLAIN_TEXT" value="65" />
-          <entry key="Python" value="6795" />
+          <entry key="Python" value="6796" />
           <entry key="Scratch" value="28" />
         </counts>
       </usages-collector>
@@ -199,29 +129,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/manager/table_post.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+            <state relative-caret-position="80">
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/manager/includes/list_post.html">
+        <entry file="file://$PROJECT_DIR$/management/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="25" column="24" lean-forward="true" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/manager/includes/deletepost.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="55" selection-start-column="55" selection-end-column="55" />
+            <state relative-caret-position="208">
+              <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
               <folding>
-                <element signature="e#250#257#1#HTML" expanded="true" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/editor.codeinsight.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -229,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/management/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="160">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -239,45 +169,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/management/views.py">
+        <entry file="file://$PROJECT_DIR$/homepage/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
+            <state relative-caret-position="112">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#28#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/newpost.js">
+        <entry file="file://$PROJECT_DIR$/Helvoirt/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="92" column="18" lean-forward="true" selection-start-line="92" selection-start-column="18" selection-end-line="92" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/manager/includes/updatepost.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/manager/includes/form_post.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+            <state relative-caret-position="352">
+              <caret line="125" column="15" selection-start-line="125" selection-start-column="15" selection-end-line="125" selection-end-column="15" />
               <folding>
-                <element signature="n#div#1;n#!!top" />
-                <element signature="n#div#2;n#!!top" />
-                <element signature="n#div#3;n#!!top" />
-                <element signature="n#div#4;n#!!top" />
+                <element signature="e#3500#6353#0" />
               </folding>
             </state>
           </provider>
@@ -395,11 +304,6 @@
             <path>
               <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
               <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
               <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -416,42 +320,6 @@
               <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
               <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
@@ -619,14 +487,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32939914" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4968017" visible="true" weight="0.2446352" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4946695" weight="0.2446352" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -645,6 +512,31 @@
       <window_info anchor="right" id="SciView" order="3" weight="0.32973316" />
       <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17857143" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23454158" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2446352" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32939914" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32725322" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32939914" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.32996634" />
+      <window_info anchor="bottom" id="manage.py@Helvoirt" order="14" weight="0.32939914" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32973316" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.17857143" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -677,13 +569,6 @@
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Scripts/pip-script.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requiremments.txt" />
     <entry file="das://8af8ee14-1113-41bf-9f16-8a05ecae99d4/schema/main/table/homepage_webcategory">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -692,13 +577,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://8af8ee14-1113-41bf-9f16-8a05ecae99d4/schema/main/table/homepage_subcategory">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://8af8ee14-1113-41bf-9f16-8a05ecae99d4/schema/main/table/homepage_subcategory" />
     <entry file="file://$PROJECT_DIR$/homepage/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -807,13 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="61" column="78" selection-start-line="61" selection-start-column="78" selection-end-line="61" selection-end-column="93" />
-          <folding>
-            <element signature="e#553#560#1#HTML" expanded="true" />
-            <element signature="e#1346#1367#0#HTML" expanded="true" />
-            <element signature="e#2046#2067#0#HTML" expanded="true" />
-            <element signature="e#3200#3221#0#HTML" expanded="true" />
-            <element signature="e#3478#3499#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -843,8 +715,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Helvoirt/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="99" column="5" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+        <state relative-caret-position="352">
+          <caret line="125" column="15" selection-start-line="125" selection-start-column="15" selection-end-line="125" selection-end-column="15" />
+          <folding>
+            <element signature="e#3500#6353#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -853,8 +728,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homepage/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+        <state relative-caret-position="112">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -867,7 +742,6 @@
           <caret line="13" column="43" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="43" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
-            <marker date="1577540105843" expanded="true" signature="1212:2079" ph="..." />
           </folding>
         </state>
       </provider>
@@ -876,10 +750,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-          <folding>
-            <element signature="n#div#0;n#!!top" />
-            <element signature="n#form#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -908,22 +778,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/manager/add_post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" column="79" selection-start-line="5" selection-start-column="60" selection-end-line="5" selection-end-column="89" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/manager/add_post.html" />
     <entry file="file://$PROJECT_DIR$/management/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -957,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/management/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="160">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -969,9 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="55" selection-start-column="55" selection-end-column="55" />
-          <folding>
-            <element signature="e#250#257#1#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,18 +853,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/manager/table_post.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/management/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1017,12 +862,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/management/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="58" column="17" lean-forward="true" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
           <folding>
-            <element signature="n#div#1;n#!!top" />
-            <element signature="n#div#2;n#!!top" />
-            <element signature="n#div#3;n#!!top" />
-            <element signature="n#div#4;n#!!top" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/editor.codeinsight.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>

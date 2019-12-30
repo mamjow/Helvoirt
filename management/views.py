@@ -76,3 +76,22 @@ def save_post_form(request, form, template_name):
 def post_list(request):
     posts = BlogPost.objects.all().order_by('post_time').reverse()
     return render(request, 'manager/table_post.html', {'posts': posts})
+
+    return JsonResponse(data)
+
+
+# def add_post(request):
+#
+#     inform = AddPost(request.POST or None, request.FILES or None)
+#     if request.method == 'POST' or None:
+#         inform.save()
+#     template = "manager/add_post.html"
+#     context = {
+#         'form': inform
+#     }
+#     return render(request, template, context)
+
+
+def post_list(request):
+    posts = BlogPost.objects.all()
+    return render(request, 'manager/table_post.html', {'posts': posts})
