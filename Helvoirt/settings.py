@@ -35,7 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Homepage.apps.HomepageConfig',
+    'homepage.apps.HomepageConfig',
     'accounts.apps.AccountsConfig',
     'mathfilters',
     'jquery',
@@ -126,7 +126,7 @@ STATICFILES_DIRS = [
     '/static/',
 ]
 STATIC_URL = '/static/'
-# STATIC_ROOT = 'deply/static/'
+STATIC_ROOT = 'staticroot/static/'
 CKEDITOR_UPLOAD_PATH = 'ckuploads/'
 
 CKEDITOR_CONFIGS = {

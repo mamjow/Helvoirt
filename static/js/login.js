@@ -10,13 +10,14 @@ $(document).ready(function () {
         var login_icon = $('#login-button-icon');
         login_icon.removeClass(' fa-sign-in-alt').addClass('fa-spinner fa-spin');
 
-    })
+    });
 
     $('#LoginForm').on('submit', function (event) {
         var username = $('#user_name').val();
         var password = $('#user_password').val();
         var login_icon = $('#login-button-icon');
         var login_button = $('#login-button-msg');
+        var ajax_err = $('#ajax-errors');
 
         event.preventDefault();
         var form = $(this).closest("form");
@@ -26,14 +27,18 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (response) {
                 if (response.message == "username") {
-                    var ajax_err = $('#ajax-errors');
+
                     ajax_err.css('display', 'block');
                     ajax_err.find('span').html('Ops. Your username does not exits!')
+                    login_button.html('inloggen');
+                    login_icon.removeClass('fa-spinner fa-spin').addClass('fa-arrow-circle-right');
                 }
                 if (response.message == "password") {
-                    var ajax_err = $('#ajax-errors');
+
                     ajax_err.css('display', 'block');
                     ajax_err.find('span').html('Ops. Your password is wrong!')
+                    login_button.html('inloggen');
+                    login_icon.removeClass('fa-spinner fa-spin').addClass('fa-arrow-circle-right');
                 }
 
                 if (response.message == "success") {

@@ -17,8 +17,10 @@
 <div class="container position-fixed" style="z-index: 2">
     <div id="mySidenav" class="mySidenav">
         {% for object in menu_list %}
-            <a href="http://127.0.0.1:8000/admin/" class="sidnavItems" style="top: {{ forloop.counter|mul:70 }}px">{{ object.menu_title }}</a>
-            <a href="http://127.0.0.1:8000/panel/dashboard/" class="sidnavItems" style="top: {{ forloop.counter|mul:170 }}px">{{ object.menu_title }}</a>
+            <a href="http://127.0.0.1:8000/admin/" class="sidnavItems"
+               style="top: {{ forloop.counter|mul:70 }}px">Admin</a>
+            <a href="http://127.0.0.1:8000/panel/dashboard/" class="sidnavItems"
+               style="top: {{ forloop.counter|mul:170 }}px">Dashboard</a>
         {% endfor %}
 
     </div>
@@ -192,8 +194,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-<script src="{% static 'js/register.js' %}?version=60" type="text/javascript"></script>
-<script src="{% static 'js/login.js' %}?version=60" type="text/javascript"></script>
+<script src="{% static 'js/register.js' %}?version=70" type="text/javascript"></script>
+<script src="{% static 'js/login.js' %}?version=70" type="text/javascript"></script>
 {% block javascript %}
 {% endblock %}
 
