@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'accounts.apps.AccountsConfig',
     'mathfilters',
-    'jquery',
     'rest_framework',
     'ckeditor',
     'ckeditor_uploader',

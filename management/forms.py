@@ -1,4 +1,3 @@
-import self as self
 from django.forms import ModelForm
 from homepage.models import BlogPost
 from django import forms
