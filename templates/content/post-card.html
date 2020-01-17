@@ -1,0 +1,51 @@
+{% for object in object_list %}
+    <div class="row m-2">
+        <div class="col p-0">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title m-0">
+                        {{ object.post_title }}
+                    </h4>
+                </div>
+                {% if object.post_images %}
+                    <img class="card-img-top img-thumbnail text-center"
+                         src="{{ object.post_images.url }} " style="height: 450px; "
+                         alt="Card image cap">
+                {% else %}
+                    <img class="card-img-top img-thumbnail text-center"
+                         src="/static/post-default.jpg" style="height: 450px; "
+                         alt="Card image cap">
+                {% endif %}
+
+                <div class="card-body"
+                     style="position: inherit; bottom: 00px;background-color: rgba(255, 0, 0, 0.3);">
+                    <p class="card-text ">{{ object.post_header }}</p>
+                </div>
+
+                <div class="card-footer text-muted">
+                    <small>{{ object.post_author|title }}
+                        <cite title="Source Title">- {{ object.post_time|date:"F d, Y" }}
+                        </cite>
+                    </small>
+                    <a href="/{{ object.slug }}"
+                       class=" float-right">Meer
+                        lezen</a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1 ">
+            {% if user.is_staff %}
+                <span class="float-right ">
+                                            <a class="px-2 text-danger " href="#"><i class="fas fa-edit"></i>
+                                            </a>
+                                            <a class="px-2 text-danger " href="{% url 'post_delete' object.id %}"><i
+                                                    class="fas fa-trash-alt"></i>
+                                            </a>
+                                            </span>
+            {% endif %}
+        </div>
+    </div>
+
+{% endfor %}

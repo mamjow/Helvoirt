@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    {% load static %}
+    {% load mathfilters %}
+    <meta charset="UTF-8">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- icon -->
+    <script src="https://kit.fontawesome.com/2e5b1f81d5.js" crossorigin="anonymous"></script>
+
+    <!-- khodnevis css -->
+    <link rel="stylesheet" href="{% static 'css/master.css' %}?version=60" type="text/css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Anton|Bitter|Modak|Zhi+Mang+Xing&display=swap"
+          rel="stylesheet">
+    <!-- table -->
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-flash-1.6.1/b-html5-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.css"/>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.20/af-2.3.4/b-1.6.1/b-colvis-1.6.1/b-flash-1.6.1/b-html5-1.6.1/cr-1.5.2/fc-3.3.0/fh-3.1.6/kt-2.5.1/r-2.2.3/rg-1.1.1/rr-1.2.6/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.js"></script>
+    <!-- shitcategory -->
+
+
+    <title>Helvoirthuis</title>
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 6px 6px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav h1 {
+            padding: 6px 6px 6px 25px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #05B183;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 200px; /* Same as the width of the sidenav */
+            margin-top: 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+{% if user.is_staff %}
+    <div class="sidenav">
+        <h1>
+            <i class="fas fa-users-cog"></i> Hi {{ user| capfirst }}
+        </h1>
+        <div class="col  ">
+            <button class="btn btn-info btn-block text-light  text-left"
+                    onclick="window.location.href = '{% url 'home-blog' %}';">
+                <i class="fas fa-home"></i> Visit HomePage
+            </button>
+            <button type="button" class="btn btn-success  btn-block  text-left"
+                    onclick="window.location.href = '{% url 'dashboard' %}';"
+            ><i class="fas fa-pencil-ruler"></i> Dashboard
+            </button>
+        </div>
+
+
+    </div>
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                {% block adminmainpanel %}
+
+
+                {% endblock %}
+                {% block adminsidepanel %}
+                    <button class="btn btn-lg btn-success text-light" onclick="window.location.href = '/panel/posts/';">
+                        Article list
+
+                    </button>
+
+                {% endblock %}
+            </div>
+
+        </div>
+
+    </div>
+{% endif %}
+</body>
+</body>
+
+<!-- XDSoft DateTimePicker -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css"
+      integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"
+        integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
+
+
+<!-- Js haye khod nevis -->
+
+{% block javascript %}
+
+{% endblock %}
+
+
+</html>

@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage.apps.HomepageConfig',
     'accounts.apps.AccountsConfig',
+    'management.apps.ManagementConfig',
     'mathfilters',
-    'jquery',
     'rest_framework',
     'ckeditor',
     'ckeditor_uploader',
@@ -195,7 +195,8 @@ CKEDITOR_CONFIGS = {
 }
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 AUTH_USER_MODEL = 'accounts.CustomUser'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'

@@ -1,20 +1,95 @@
-{% load widget_tweaks %}
+{% extends 'manager/panel.html' %}
 
-<form method="post" action="{% url 'post_new' %}" class="js-post-create-form" enctype="multipart/form-data">
+{% load static %}
 
-    <div class="modal-header">
-        <h4 class="modal-title">Create a new post</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+{% block adminmainpanel %}
 
+    {{ form.media }}
+    {% load widget_tweaks %}
+    <div class="col m-2">
+        <form method="POST" data-url="{% url 'post_new' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group  {% if field.errors %} bg-danger{% endif %}">
+
+                <div class="row justify-content-center">
+                    <div class="btn-group mb-2" style="width: 100%;">
+                        <button type="button" class="btn btn-danger">Cancel</button>
+                        <button type="submit" class="btn btn-success ">Save</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3 p-0">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" for="{{ form.post_title.id_for_label }}">Title</span>
+                            </div>
+                            {{ form.post_title|add_class:'form-control' }}
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" for="{{ form.post_header.id_for_label }}">Header:</span>
+                            </div>
+                            {{ form.post_header|add_class:'form-control'|attr:'rows' }}
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" for="{{ form.post_time.id_for_label }}">Time:</span>
+                            </div>
+                            {{ form.post_time|add_class:'form-control' }}
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text"
+                                       for="{{ form.post_category.id_for_label }}">Category:</label>
+                            </div>
+                            {{ form.post_category |add_class:'form-control' }}
+                        </div>
+
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="{{ form.post_type.id_for_label }}">Type:</label>
+                            </div>
+                            {{ form.post_type|add_class:'form-control' }}
+                        </div>
+
+                        <label for="{{ form.post_images.id_for_label }}">Cover image:</label>
+                        {{ form.post_images|add_class:'form-control' }}
+                        <div class="invalid-feedback" id="PostImageInput-errors">
+                            {{ form.errors }}
+                        </div>
+
+
+                    </div>
+                    <div class="col">
+                        {{ form.post_body|add_class:'form-control' }}
+                    </div>
+                </div>
+
+            </div>
+        </form>
     </div>
-    <div class="modal-body">
 
-        {% include 'manager/includes/form_post.html' %}
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Create book</button>
-    </div>
-</form>
+{% endblock %}
+
+{% block adminsidepanel %}
+
+{% endblock %}
+{% block javascript %}
+    <script>
+        $(document).ready(function () {
+            $("#{{ form.post_time.auto_id }}").datetimepicker({
+                dateFormat: 'YYYY-mm-dd',
+                format: 'Y-m-d H:i:s',
+            });
+        });
+    </script>
+{% endblock %}
+

@@ -11,18 +11,23 @@ from ckeditor_uploader.fields import RichTextUploadingField
 user = CustomUser
 
 
+def default_place_pics():
+    return "post-default.jpg"
+
+
 class BlogPost(models.Model):
     post_title = models.CharField(max_length=200, null=False)
-    post_header = models.TextField(max_length=250, )
+    post_header = models.TextField(max_length=250, null=True, blank=True)
     # post_Body = RichTextField()
     post_body = RichTextUploadingField(null=True)
-    post_images = models.ImageField(upload_to='uploads/', null=True)
+    post_images = models.ImageField(upload_to='post-uploads/', null=True, blank=True)
     post_time = models.DateTimeField(default=timezone.now, null=False)
     post_author = models.ForeignKey(
         user,
         on_delete=models.CASCADE,
         limit_choices_to={'is_staff': True},
-        null=True
+        null=True,
+        default=user,
     )
     post_category = models.ForeignKey('WebCategory', on_delete=models.CASCADE, default=1)
     post_type = models.ForeignKey('PostType', on_delete=models.CASCADE, default=1)
@@ -31,6 +36,8 @@ class BlogPost(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.post_title)
         self.post_header = self.post_title
+        # if self.post_images is None:
+        #     self.post_images = default_place_pics()
         super(BlogPost, self).save(*args, **kwargs)
 
 
@@ -63,6 +70,10 @@ class PostType(models.Model):
 
     def __str__(self):
         return self.PostType
+
+
+class SliderGallery(models.Model):
+    image = models.ImageField(upload_to='slidergallery', null=False)
 
 
 class HomeAdv(models.Model):

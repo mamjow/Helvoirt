@@ -27,7 +27,7 @@ def home(request):
 
 
 def post_details(request, slug=None):
-    template = "content/postview.html"
+    template = "content/post-card-full.html"
     qs = BlogPost.objects.get(slug=slug)
     context = {
         'post_details': qs,

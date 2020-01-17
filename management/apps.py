@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class ModirConfig(AppConfig):
+class ManagementConfig(AppConfig):
     name = 'management'

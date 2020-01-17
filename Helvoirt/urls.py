@@ -40,3 +40,4 @@ urlpatterns = [
                   # url('api/account/', include('accounts.api.urls'), 'account_api'),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

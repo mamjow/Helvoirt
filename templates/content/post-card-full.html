@@ -12,15 +12,20 @@
 {% block content %}
     <div class="container-fluid mt-2 mb-1 rounded bg-white">
         <div class="row">
+            {% if post_details.post_images %}
             <div class="col-7">
                 <h2 class="pt-4"> {{ post_details.post_title }}</h2>
                 <p> {{ post_details.post_body | safe }}</p>
             </div>
             <div class="col-5 p-1">
                 <img class="col-12 justify-content-center" src="{{ post_details.post_images.url }}">
-
             </div>
-
+            {% else %}
+                <div class="col-12">
+                    <h2 class="pt-4"> {{ post_details.post_title }}</h2>
+                    <p> {{ post_details.post_body | safe }}</p>
+                </div>
+            {% endif %}
         </div>
 
     </div>

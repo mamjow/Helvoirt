@@ -1,16 +1,23 @@
-<form method="post" action="{% url 'post_delete' object.id %}" class="js-book-delete-form">
-    {% csrf_token %}
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title">Confirm book deletion</h4>
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="DeleteModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form method="POST" data-url="" id="DeleteAproved">
+                {% csrf_token %}
+                <div class="modal-header">
+                    <h4 class="modal-title">Confirm article deletion</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Are you sure you want to delete the article <strong> </strong>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="modal-body">
-        <p class="lead">Are you sure you want to delete the book <strong>{{ object.post_title }}</strong>?</p>
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-danger">Delete book</button>
-    </div>
-</form>
+</div>

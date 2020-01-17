@@ -1,45 +1,84 @@
-{% extends 'manager/modiriat.html' %}
-{% include "manager/includes/newpost.html" %}
+{% extends 'manager/panel.html' %}
 
 {% load static %}
 {% block adminmainpanel %}
     <div class="col">
-        <table class="table" id="book-table">
-            <thead>
+        <button type="button" class="btn btn-primary my-2 btn-block"
+                onclick="window.location.href = '{% url 'post_new' %}';">
+            <i class="fas fa-plus mx-1"> </i>
+            New article
+        </button>
+        <table class="table table-striped table-bordered table-hover" id="post-table" style="width:100%">
+            <thead class="thead-dark">
             <tr>
                 <th>Title</th>
-                <th>Header</th>
-                <th>Date</th>
+                <th width="70px">Date</th>
                 <th>Author</th>
                 <th>Type</th>
                 <th>Category</th>
+                <th>Options</th>
             </tr>
             </thead>
             <tbody>
-            {% include 'manager/includes/list_post.html' %}
+            {% for object in posts %}
+                <tr>
+                    <td>{{ object.post_title }}</td>
+                    <td>{{ object.post_time|date:'Y-m-d' }}</td>
+                    <td>{{ object.post_author }}</td>
+                    <td>{{ object.post_type }}</td>
+                    <td>{{ object.post_category }}</td>
+                    <td>
+                        <div class="btn-group">
+                            <button type="button"
+                                    class="btn btn-warning btn-block"
+                                    onclick="window.location.href = '{% url 'post_update' object.id %}';"
+                            >
+                                <a>
+                                    <i class="fas fa-pen"></i>
+                                </a>
+                            </button>
+                            <button type="button"
+                                    class="btn btn-danger open-modal"
+                                    id="OpenDeleteModal"
+                                    data-toggle="modal" data-target="#confirmDeleteModal"
+                                    data-whatever="{{ object.post_title }}"
+                                    data-formurl="{% url 'post_delete' object.id %}"
+                            >
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </td>
+
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="7" class="text-center bg-warning">No book</td>
+                </tr>
+            {% endfor %}
             </tbody>
         </table>
     </div>
-
-    <div class="modal fade" id="NewPostModal">
-        <div class="modal-dialog">
-            <div class="modal-content" style="width: 700px">
-            </div>
-        </div>
-    </div>
-
+    {% include 'manager/includes/deletepost.html' %}
 {% endblock %}
 
 {% block adminsidepanel %}
-    <div class="col m-3">
-        <p>
-            <button type="button" class="btn btn-primary" id="NewPostModalCall"
-                    data-url="{% url 'post_new' %}">
-                <span class="glyphicon glyphicon-plus"></span>
-                New Post
-            </button>
-        </p>
-    </div>
+
 {% endblock %}
 
+{% block javascript %}
+    <script src="{% static 'js/posts.js' %}?version=34" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $('#post-table').DataTable({
+            {#dom:'B<"clear">lfrtip',#}
+            {#buttons:{#}
+            {#    name: 'primary',#}
+            {#    buttons: ['excel', 'pdf']#}
+            {#}#}
+            }
+        )
+            ;
+        });
 
+    </script>
+{% endblock %}

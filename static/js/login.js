@@ -29,7 +29,7 @@ $(document).ready(function () {
                 if (response.message == "username") {
 
                     ajax_err.css('display', 'block');
-                    ajax_err.find('span').html('Ops. Your username does not exits!')
+                    ajax_err.find('span').html('Ops. Your username does not exits!');
                     login_button.html('inloggen');
                     login_icon.removeClass('fa-spinner fa-spin').addClass('fa-arrow-circle-right');
                 }
