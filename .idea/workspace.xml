@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd561a11-8182-4a4a-95fc-227f3d0aa33a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Management/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Management/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="bd561a11-8182-4a4a-95fc-227f3d0aa33a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +129,47 @@
     <favorites_list name="Helvoirt" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/management/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1054">
+              <caret line="62" selection-start-line="62" selection-end-line="62" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/management/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/management/apps.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/management/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -296,67 +334,6 @@
             <path>
               <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
               <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="homepage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="management" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="content" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="registration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
@@ -534,12 +511,12 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="30" width="1934" height="1057" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857953" visible="true" weight="0.33671293" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857953" visible="true" weight="0.34044823" />
       <window_info id="Structure" order="1" sideWeight="0.50142044" side_tool="true" weight="0.2707889" />
       <window_info id="Favorites" order="2" sideWeight="0.50142044" side_tool="true" weight="0.2707889" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4946695" visible="true" weight="0.2446352" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4946695" visible="true" weight="0.24377032" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -805,25 +782,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/management/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="119">
           <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/management/models.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/management/models.py" />
     <entry file="file://$PROJECT_DIR$/management/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="153">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/management/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="46" column="47" lean-forward="true" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+        <state relative-caret-position="1054">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
