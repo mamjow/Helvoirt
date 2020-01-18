@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd561a11-8182-4a4a-95fc-227f3d0aa33a" name="Default Changelist" comment="" />
+    <list default="true" id="bd561a11-8182-4a4a-95fc-227f3d0aa33a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +52,14 @@
     <session id="321670066">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="62" />
-          <entry key="project.open.time.3" value="2" />
+          <entry key="project.closed" value="63" />
+          <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="19" />
           <entry key="project.open.time.5" value="31" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.6" value="11" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="65" />
+          <entry key="project.opened" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -72,8 +74,8 @@
           <entry key="jpg" value="1" />
           <entry key="js" value="27" />
           <entry key="png" value="1" />
-          <entry key="py" value="295" />
-          <entry key="txt" value="10" />
+          <entry key="py" value="296" />
+          <entry key="txt" value="11" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -84,8 +86,8 @@
           <entry key="HTML" value="210" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="27" />
-          <entry key="PLAIN_TEXT" value="12" />
-          <entry key="Python" value="293" />
+          <entry key="PLAIN_TEXT" value="13" />
+          <entry key="Python" value="294" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -119,7 +121,7 @@
           <entry key="git.branch.compare" value="3" />
           <entry key="git.branch.delete.local" value="1" />
           <entry key="git.branch.delete.remote" value="2" />
-          <entry key="git.branch.rebase" value="1" />
+          <entry key="git.branch.rebase" value="2" />
           <entry key="git.branch.rename" value="2" />
         </counts>
       </usages-collector>
@@ -129,44 +131,10 @@
     <favorites_list name="Helvoirt" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/management/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="62" selection-start-line="62" selection-end-line="62" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/management/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/management/apps.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/management/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/requirments.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -191,7 +159,13 @@
       <find>stat</find>
     </findStrings>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="PRESERVE_MERGES" value="true" />
+    <option name="SHOW_TAGS" value="true" />
+    <option name="SHOW_REMOTE_BRANCHES" value="true" />
+  </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="ROOT_SYNC" value="SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -337,12 +311,16 @@
             </path>
             <path>
               <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Helvoirt" type="462c0819:PsiDirectoryNode" />
+              <item name="management" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
               <item name="Helvoirt" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Extensions" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
             </path>
           </expand>
           <select />
@@ -510,13 +488,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="30" width="1934" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857953" visible="true" weight="0.34044823" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49857953" visible="true" weight="0.34418356" />
       <window_info id="Structure" order="1" sideWeight="0.50142044" side_tool="true" weight="0.2707889" />
       <window_info id="Favorites" order="2" sideWeight="0.50142044" side_tool="true" weight="0.2707889" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4946695" visible="true" weight="0.24377032" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4946695" weight="0.24377032" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39914164" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -525,7 +504,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" sideWeight="0.49946696" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50319827" side_tool="true" weight="0.2446352" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" weight="0.32719395" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" visible="true" weight="0.32719395" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32939914" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.32996634" />
       <window_info anchor="bottom" id="manage.py@Helvoirt" order="14" weight="0.32939914" />
@@ -593,7 +572,6 @@
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/homepage/api/views.py" />
     <entry file="file://$PROJECT_DIR$/homepage/api/urls.py" />
     <entry file="file://$PROJECT_DIR$/accounts/admin.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -688,13 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/management/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homepage/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -780,31 +751,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/management/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/management/models.py" />
-    <entry file="file://$PROJECT_DIR$/management/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/management/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/posts.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -874,6 +821,37 @@
           <caret line="75" column="57" selection-start-line="75" selection-start-column="57" selection-end-line="75" selection-end-column="57" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/management/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/management/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/management/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/management/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" selection-start-line="62" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirments.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

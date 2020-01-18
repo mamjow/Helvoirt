@@ -1,0 +1,14 @@
+asgiref==3.2.3
+decorator==4.4.1
+Django==2.2.6
+django-ckeditor==5.8.0
+django-jquery==3.1.0
+django-js-asset==1.2.2
+django-mathfilters==0.4.0
+django-widget-tweaks==1.4.5
+djangorestframework==3.11.0
+Pillow==7.0.0
+public==2019.4.13
+pytz==2019.3
+self==2019.4.13
+sqlparse==0.3.0
