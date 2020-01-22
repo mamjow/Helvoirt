@@ -1,48 +1,114 @@
 
-.sabzi-rang{
+.sabzi-rang {
     background-color: #05B183;
 }
 
 .thumbnail {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
 }
+
 .thumbnail img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
+
+.cardpostal {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+.cardpostal-text {
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+    position: absolute;
+    color: #dfdfdf;
+    top: 0px;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+}
+
 .thumbnail img.portrait {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #424242;
+    font-size: 20px;
+    border: none;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    font-size: 16px;
+    position: absolute;
+    color: red;
+    background-color: black;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+    color: #b9073d;
 }
 
 .mySidenav a {
-  position: absolute; /* Position them relative to the browser window */
-  left: -150px; /* Position them outside of the screen */
-  transition: 0.3s; /* Add transition on hover */
-  padding: 15px; /* 15px padding */
-  width: 200px; /* Set a specific width */
-  text-decoration: none; /* Remove underline */
-  font-size: 20px; /* Increase font size */
-  color: white; /* White text color */
-  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */z-index: 1;
+    position: absolute; /* Position them relative to the browser window */
+    left: 10px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: #05B183; /* White text color */
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    background-color: #b91e1c;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 7000;
+
 }
 
 .mySidenav a:hover {
-  left: 0px; /* On mouse-over, make the elements appear as they should */
+    left: 20px; /* On mouse-over, make the elements appear as they should */
+    background-color: #d3d639;
 }
 
 /* The about link: 20px from the top with a green background */
 .sidnavItems {
-  top: 20px;
-  background-color: #05B183;
+    text-align: center;
+    top: 120px;
 }
 

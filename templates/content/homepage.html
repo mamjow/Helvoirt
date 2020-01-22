@@ -6,26 +6,24 @@
 {% block slider %}
     {% include 'content/slider.html' %}
 {% endblock %}
-
-
-
+{% block events %}
+    {% include 'content/events.html' with events=event_list %}
+{% endblock %}
 <!-------------------- Content  ----------->
 {% block content %}
-    <div class="col-11">
-
+    <div class="col-12">
         {% include 'content/post-card.html' %}
-
-</div>
-{% endblock %}
-<!-------------------- Adv  ----------->
-{% block adver %}
-    <div class="col-1">
-        {% for object in adv %}
-            <a class="float-right m-2" href="{{ object.adv_adres }}"> <img
-                    class="img-thumbnail center-block"
-                    src="{{ object.adv_images.url }}"
-                    alt="Image"/></a>
-        {% endfor %}
-        asd
+        {% include 'content/snippet/blog_post_pagination.html' with blog_posts=object_list %}
     </div>
 {% endblock %}
+<!-------------------- Adv  ----------->
+{#{% block adver %}#}
+{#    <div class="col-1">#}
+{#        {% for object in adv %}#}
+{#            <a class="float-right m-2" href="{{ object.adv_adres }}"> <img#}
+{#                    class="img-thumbnail center-block"#}
+{#                    src="{{ object.adv_images.url }}"#}
+{#                    alt="Image"/></a>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#{% endblock %}#}

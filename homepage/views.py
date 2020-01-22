@@ -6,17 +6,33 @@ from .models import BlogPost
 from .models import WebCategory
 from .models import HomeAdv
 from django.contrib import messages
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
+
+BLOG_POST_PER_PAGE = 6
 
 
 def home(request):
     template = "content/homepage.html"
-    qs = BlogPost.objects.all().order_by('post_time').reverse()
+    blog_post = BlogPost.objects.all().order_by('post_time').reverse()
+    qs = blog_post.filter(post_type__PostType='Blog Post')
+    eqs = blog_post.filter(post_type__PostType='Events')
     ms = WebCategory.objects.all()
     path = "static/image"  # insert the path to your directory
     img_list = os.listdir(path)
     adv_gif = HomeAdv.objects.all()
 
+    # Pagination
+    page = request.GET.get('page', 1)
+    blog_post_paginator = Paginator(qs, BLOG_POST_PER_PAGE)
+    try:
+        qs = blog_post_paginator.page(page)
+    except PageNotAnInteger:
+        qs = blog_post_paginator(BLOG_POST_PER_PAGE)
+    except EmptyPage:
+        qs = blog_post_paginator(qs.paginator.num_pages)
+
     context = {
+        'event_list': eqs,
         'object_list': qs,
         'menu_list': ms,
         'menuactive': 'Home',
