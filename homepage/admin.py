@@ -12,10 +12,9 @@ class BlogpostView(admin.ModelAdmin):
         'post_title',
         'post_time',
         'post_author',
-        'post_type'
     ]
     search_fields = ('post_title',)
-    list_filter = ('post_author', 'post_type')
+    list_filter = ('post_author',)
     prepopulated_fields = {'slug': ('post_title',)}
 
 

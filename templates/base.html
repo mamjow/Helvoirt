@@ -18,7 +18,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!-- khodnevis css -->
-    <link rel="stylesheet" href="{% static 'css/master.css' %}?version=66" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/master.css' %}?version=68" type="text/css">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto|Anton|Bitter|Modak|Zhi+Mang+Xing&display=swap"
           rel="stylesheet">
@@ -35,10 +35,12 @@
         }
 
     </style>
+    {% block style %}
+    {% endblock %}
     <title>Helvoirthuis</title>
 </head>
-<body class="bg-info"
-      style="font-family: Roboto; background-size: cover; background-position: center center;">
+<body
+        style="font-family: Roboto; background-color:#273f4e; background-position: center center;">
 
 {% if user.is_staff %}
 <div class="container position-fixed" style="z-index: 2">
@@ -137,11 +139,11 @@
 
         </div>
         <div class="row">
-            <div class="col-lg-8 col-md-12 p-0">
+            <div class="col-lg-9 col-md-12 p-0">
                     {% block content %}
                     {% endblock %}
             </div>
-            <div class="col-lg-4 col-md-12">
+            <div class="col-lg-3 col-md-12">
                 {% block events %}
                 {% endblock %}
             </div>

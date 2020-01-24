@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import get_user_model, authenticate
 from django.views.generic import TemplateView
 from django.http import JsonResponse, HttpResponse
-from .forms import AddPost
+from .forms import AddPost, AddIntro, AddEvent
 from django.shortcuts import get_object_or_404
 from homepage.models import BlogPost
+from .models import IntroPost, Events
 
 User = get_user_model()
 
@@ -19,6 +20,24 @@ class Panel(TemplateView):
 def post_list(request):
     posts = BlogPost.objects.all().order_by('post_time').reverse()
     return render(request, 'manager/table_post.html', {'posts': posts})
+
+
+def intro_page(request):
+    template = 'manager/introduce.html'
+    context = {
+        'form': AddIntro,
+    }
+    return render(request, template, context)
+
+
+def calender_page(request):
+    event_list = Events.objects.all()
+    template = 'manager/calender.html'
+    context = {
+        'form': AddEvent,
+        'events': event_list
+    }
+    return render(request, template, context)
 
 
 def update_post(request, pk):

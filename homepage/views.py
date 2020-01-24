@@ -14,8 +14,8 @@ BLOG_POST_PER_PAGE = 6
 def home(request):
     template = "content/homepage.html"
     blog_post = BlogPost.objects.all().order_by('post_time').reverse()
-    qs = blog_post.filter(post_type__PostType='Blog Post')
-    eqs = blog_post.filter(post_type__PostType='Events')
+    qs = blog_post.filter()
+    eqs = blog_post.filter()
     ms = WebCategory.objects.all()
     path = "static/image"  # insert the path to your directory
     img_list = os.listdir(path)

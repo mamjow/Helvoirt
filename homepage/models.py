@@ -1,3 +1,4 @@
+import os
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
@@ -5,11 +6,8 @@ from django.template.defaultfilters import slugify
 from accounts.models import CustomUser
 from ckeditor_uploader.fields import RichTextUploadingField
 
-
 # Create your models here.
-
 user = CustomUser
-
 
 def default_place_pics():
     return "post-default.jpg"
@@ -29,8 +27,6 @@ class BlogPost(models.Model):
         null=True,
         default=user,
     )
-    post_category = models.ForeignKey('WebCategory', on_delete=models.CASCADE, default=1)
-    post_type = models.ForeignKey('PostType', on_delete=models.CASCADE, default=1)
     slug = models.SlugField(unique=True)
 
     def save(self, *args, **kwargs):

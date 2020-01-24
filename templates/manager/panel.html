@@ -90,6 +90,8 @@
             }
         }
     </style>
+    {% block style %}
+    {% endblock %}
 </head>
 
 <body>
@@ -101,11 +103,24 @@
         <div class="col  ">
             <button class="btn btn-info btn-block text-light  text-left"
                     onclick="window.location.href = '{% url 'home-blog' %}';">
-                <i class="fas fa-home"></i> Visit HomePage
+                <span><i class="fas fa-home"></i> </span>
+                Visit HomePage
             </button>
             <button type="button" class="btn btn-success  btn-block  text-left"
                     onclick="window.location.href = '{% url 'dashboard' %}';"
             ><i class="fas fa-pencil-ruler"></i> Dashboard
+            </button>
+            <button class="btn btn-primary btn-block text-light  text-left"
+                    onclick="window.location.href = '{% url 'post_list' %}';">
+                <i class="fas fa-home"></i> News Page
+            </button>
+            <button type="button" class="btn btn-warning  btn-block  text-left"
+                    onclick="window.location.href = '{% url 'calender_page' %}';"
+            ><i class="fas fa-pencil-ruler"></i> Calender
+            </button>
+            <button type="button" class="btn btn-warning  btn-block  text-left"
+                    onclick="window.location.href = '{% url 'intro_page' %}';"
+            ><i class="fas fa-pencil-ruler"></i> Introdoction
             </button>
         </div>
 
@@ -114,17 +129,14 @@
     <div class="main">
         <div class="container-fluid">
             <div class="row">
+                {% block adminsidepanel %}
+
+                {% endblock %}
                 {% block adminmainpanel %}
 
 
                 {% endblock %}
-                {% block adminsidepanel %}
-                    <button class="btn btn-lg btn-success text-light" onclick="window.location.href = '/panel/posts/';">
-                        Article list
 
-                    </button>
-
-                {% endblock %}
             </div>
 
         </div>

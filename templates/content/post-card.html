@@ -1,34 +1,34 @@
 <div class="row my-2">
 
     {% for object in object_list %}
-        <div class="col-lg-4 col-sm-6 p-1 d-flex ">
+        <div class="col-6 p-1">
 
-            <div class="card w-100 h-100">
+            <div class="card text-white h-100" style="background-color: #05B183">
 
                 <div class="card-header cardpostal-text" onclick="window.location.href = '{{ object.slug }}';"
                      style="cursor: pointer">
 
-                    <h5 class="card-title">
+                    <p class="card-title h4">
                         {{ object.post_title }}
-                    </h5>
+                    </p>
 
                 </div>
 
                 {% if object.post_images %}
-                    <img class="card-img-top img-thumbnail cardpostal"
+                    <img class="card-img-top cardpostal  "
                          src="{{ object.post_images.url }} "
                          alt="Card image cap"
-                         style="cursor: pointer"
+                         style="cursor: pointer; "
                          onclick="window.location.href = '{{ object.slug }}';">
                 {% else %}
-                    <img class="card-img-top img-thumbnail cardpostal "
+                    <img class="card-img-top cardpostal "
                          src="/static/post-default.jpg"
                          alt="Card image cap"
                          style="cursor: pointer"
                          onclick="window.location.href = '{{ object.slug }}';">
                 {% endif %}
 
-                <div class="card-footer text-muted p-1">
+                <div class="card-footer  p-1  mt-auto">
                     <small>{{ object.post_time|date:"F d, Y" }}
                     </small>
 

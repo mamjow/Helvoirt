@@ -65,7 +65,10 @@
                         <div class="invalid-feedback" id="PostImageInput-errors">
                             {{ form.errors }}
                         </div>
-
+                        <div class="col img-thumbnail text-center my-2">
+                            <img id="img_id" alt="image" class="img-thumbnail"
+                            >
+                        </div>
 
                     </div>
                     <div class="col">
@@ -89,7 +92,25 @@
                 dateFormat: 'YYYY-mm-dd',
                 format: 'Y-m-d H:i:s',
             });
+
+            $("#id_post_images").change(function () {
+                upload_img(this)
+            });
+
+            function upload_img(input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        $('#img_id').attr('src', e.target.result);
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
         });
     </script>
+
 {% endblock %}
 

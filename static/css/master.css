@@ -23,17 +23,24 @@
 
 .cardpostal {
     width: 100%;
+    height: 20rem;
     object-fit: cover;
-    height: 200px;
+}
+
+.postalcontainer {
+    background-color: red;
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* 16:9 Aspect Ratio */
 }
 
 .cardpostal-text {
-    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(0, 0, 0));
+    background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(5, 177, 131));
     position: absolute;
     color: #dfdfdf;
     top: 0px;
     width: 100%;
-    font-size: 20px;
+    height: 200px;
     border: none;
 }
 
