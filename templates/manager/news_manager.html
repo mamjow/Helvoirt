@@ -1,0 +1,50 @@
+{% extends 'manager/panel.html' %}
+
+{% load static %}
+{% block adminmainpanel %}
+    <div class="col-12">
+        <button type="button" class="btn btn-primary my-2 btn-block"
+                id="OpenAddNews"
+                data-formurl="{% url 'add_news' %}"
+        >
+            <i class="fas fa-plus mx-1"> </i>
+            New article
+        </button>
+        <table class="table table-striped table-bordered table-hover" id="data-table">
+            <thead class="thead-dark">
+            <tr>
+                <th>Title</th>
+                <th width="70px">Date</th>
+                <th>Author</th>
+                <th>Options</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% include 'manager/includes/news_table_body.html' %}
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="Form-Modal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
+    {% include 'manager/includes/news_delete.html' %}
+{% endblock %}
+
+{% block adminsidepanel %}
+
+{% endblock %}
+
+{% block javascript %}
+
+    <script>
+        $(document).ready(function () {
+            $('#news-table').DataTable({})
+            ;
+        });
+
+    </script>
+{% endblock %}

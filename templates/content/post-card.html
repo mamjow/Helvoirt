@@ -1,22 +1,22 @@
 <div class="row my-2">
 
     {% for object in object_list %}
-        <div class="col-6 p-1">
+        <div class="col-12 p-1">
 
-            <div class="card text-white h-100" style="background-color: #05B183">
+            <div class="card text-white" style="background-color: #05B183">
 
                 <div class="card-header cardpostal-text" onclick="window.location.href = '{{ object.slug }}';"
                      style="cursor: pointer">
 
-                    <p class="card-title h4">
-                        {{ object.post_title }}
+                    <p class="card-title h4" style="font-weight: bold">
+                        {{ object.news_title }}
                     </p>
 
                 </div>
 
-                {% if object.post_images %}
+                {% if object.news_images %}
                     <img class="card-img-top cardpostal  "
-                         src="{{ object.post_images.url }} "
+                         src="{{ object.news_images.url }} "
                          alt="Card image cap"
                          style="cursor: pointer; "
                          onclick="window.location.href = '{{ object.slug }}';">
@@ -29,7 +29,7 @@
                 {% endif %}
 
                 <div class="card-footer  p-1  mt-auto">
-                    <small>{{ object.post_time|date:"F d, Y" }}
+                    <small>{{ object.news_time|date:"F d, Y" }}
                     </small>
 
                     {% if user.is_staff %}
@@ -39,7 +39,7 @@
 
                                 <a class="px-2 text-danger " href="#"><i class="fas fa-edit"></i>
                                 </a>
-                                <a class="px-2 text-danger " href="{% url 'post_delete' object.id %}"><i
+                                <a class="px-2 text-danger " href="{% url 'delete_news' object.id %}"><i
                                         class="fas fa-trash-alt"></i>
                                 </a>
 

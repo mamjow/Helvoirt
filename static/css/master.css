@@ -22,8 +22,7 @@
 }
 
 .cardpostal {
-    width: 100%;
-    height: 20rem;
+    height: 30vmin;
     object-fit: cover;
 }
 
@@ -37,10 +36,10 @@
 .cardpostal-text {
     background-image: linear-gradient(to top, rgba(255, 0, 0, 0), rgb(5, 177, 131));
     position: absolute;
-    color: #dfdfdf;
+    color: #000000;
     top: 0px;
     width: 100%;
-    height: 200px;
+    height: 25%;
     border: none;
 }
 

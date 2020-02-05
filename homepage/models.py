@@ -13,14 +13,14 @@ def default_place_pics():
     return "post-default.jpg"
 
 
-class BlogPost(models.Model):
-    post_title = models.CharField(max_length=200, null=False)
-    post_header = models.TextField(max_length=250, null=True, blank=True)
+class News(models.Model):
+    news_title = models.CharField(max_length=200, null=False)
+    news_header = models.TextField(max_length=250, null=True, blank=True)
     # post_Body = RichTextField()
-    post_body = RichTextUploadingField(null=True)
-    post_images = models.ImageField(upload_to='post-uploads/', null=True, blank=True)
-    post_time = models.DateTimeField(default=timezone.now, null=False)
-    post_author = models.ForeignKey(
+    news_body = RichTextUploadingField(null=True)
+    news_images = models.ImageField(upload_to='post-uploads/', null=True, blank=True)
+    news_time = models.DateTimeField(default=timezone.now, null=False)
+    news_author = models.ForeignKey(
         user,
         on_delete=models.CASCADE,
         limit_choices_to={'is_staff': True},
@@ -30,11 +30,11 @@ class BlogPost(models.Model):
     slug = models.SlugField(unique=True)
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.post_title)
-        self.post_header = self.post_title
+        self.slug = slugify(self.news_title)
+        self.news_header = self.news_title
         # if self.post_images is None:
         #     self.post_images = default_place_pics()
-        super(BlogPost, self).save(*args, **kwargs)
+        super(News, self).save(*args, **kwargs)
 
 
 class Contact(models.Model):
@@ -49,23 +49,23 @@ class Contact(models.Model):
         return self.name
 
 
-class WebCategory(models.Model):
-    PostCategory = models.CharField(max_length=40, default="Home Page")
-    Category_summery = models.TextField(null=True)
+class Sponsor(models.Model):
+    Title = models.CharField(max_length=40, default="HelvoirThuis")
+    Short_summery = models.TextField(null=True)
 
     class Meta:
-        verbose_name_plural = "Categories"
+        verbose_name_plural = "Sponsor"
 
     def __str__(self):
-        return self.PostCategory
+        return self.Title
 
 
-class PostType(models.Model):
-    PostType = models.CharField(max_length=40, default="Blog Post")
-    PostType_summery = models.TextField(null=True)
+class IntroType(models.Model):
+    Type = models.CharField(max_length=40, default="Blog Post")
+    Type_summery = models.TextField(null=True)
 
     def __str__(self):
-        return self.PostType
+        return self.Type
 
 
 class SliderGallery(models.Model):

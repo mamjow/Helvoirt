@@ -1,13 +1,13 @@
-from django.forms import ModelForm
-from homepage.models import BlogPost
+from django.forms import ModelForm, forms
+from homepage.models import News
 from .models import Events, IntroPost
 
 
-class AddPost(ModelForm):
+class AddNews(ModelForm):
     class Meta:
-        model = BlogPost
-        fields = ('post_title', 'post_header', 'post_images', 'post_time',
-                  'post_body',)
+        model = News
+        fields = ('news_title', 'news_header', 'news_images', 'news_time',
+                  'news_body',)
 
 
 class AddEvent(ModelForm):
@@ -19,4 +19,5 @@ class AddEvent(ModelForm):
 class AddIntro(ModelForm):
     class Meta:
         model = IntroPost
+        exclude = ('post_author',)
         fields = '__all__'

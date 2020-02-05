@@ -46,5 +46,5 @@ class IntroPost(models.Model):
         null=True,
         default=user,
     )
-    post_sponsor = models.ForeignKey('homepage.WebCategory', on_delete=models.CASCADE, default=1)
-    post_type = models.ForeignKey('homepage.PostType', on_delete=models.CASCADE, default=1)
+    post_sponsor = models.ForeignKey('homepage.Sponsor', on_delete=models.CASCADE, default=1)
+    post_type = models.ForeignKey('homepage.IntroType', on_delete=models.CASCADE, default=1)

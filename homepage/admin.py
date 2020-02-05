@@ -1,21 +1,21 @@
 from django.contrib import admin
-from .models import BlogPost
+from .models import News
 from .models import Contact
-from .models import WebCategory
+from .models import Sponsor
 from .models import HomeAdv
-from .models import PostType
+from .models import IntroType
 
 # Register your models here.
 
 class BlogpostView(admin.ModelAdmin):
     list_display = [
-        'post_title',
-        'post_time',
-        'post_author',
+        'news_title',
+        'news_time',
+        'news_author',
     ]
-    search_fields = ('post_title',)
-    list_filter = ('post_author',)
-    prepopulated_fields = {'slug': ('post_title',)}
+    search_fields = ('news_title',)
+    list_filter = ('news_author',)
+    prepopulated_fields = {'slug': ('news_title',)}
 
 
 class contactView(admin.ModelAdmin):
@@ -29,15 +29,14 @@ class contactView(admin.ModelAdmin):
 
 class menutabView(admin.ModelAdmin):
     list_display = [
-        'PostCategory',
-        'Category_summery'
+        'Title',
     ]
 
 
 admin.site.register(Contact, contactView)
-admin.site.register(BlogPost, BlogpostView)
-admin.site.register(WebCategory, menutabView)
+admin.site.register(News, BlogpostView)
+admin.site.register(Sponsor, menutabView)
 admin.site.register(HomeAdv)
-admin.site.register(PostType)
+admin.site.register(IntroType)
 
 # Register your models here.

@@ -1,19 +1,22 @@
 from django.urls import path
 from django.conf.urls import url
 # from django.views.generic import TemplateView
-from accounts import views
-from .views import add_post
-from .views import update_post
-from .views import delete_post
-from .views import post_list
-from .views import Panel, intro_page, calender_page
-
+from management import views
 urlpatterns = [
-    url(r'^dashboard/$', Panel.as_view(template_name='manager/panel.html'), name='dashboard'),
-    url(r'^posts/$', post_list, name='post_list'),
-    url(r'^posts/addpost/$', add_post, name='post_new'),
-    url(r'^posts/(?P<pk>\d+)/update/$', update_post, name='post_update'),
-    url(r'^posts/(?P<pk>\d+)/delete/$', delete_post, name='post_delete'),
-    url(r'^introposts/$', intro_page, name='intro_page'),
-    url(r'^calender/$', calender_page, name='calender_page'),
+    url(r'^dashboard/$', views.Panel.as_view(template_name='manager/panel.html'), name='dashboard'),
+    # homepage post
+    url(r'^news/$', views.news_list, name='news_list'),
+    url(r'^news/add/$', views.add_news, name='add_news'),
+    url(r'^news/(?P<pk>\d+)/update/$', views.update_news, name='update_news'),
+    url(r'^news/(?P<pk>\d+)/delete/$', views.delete_news, name='delete_news'),
+    #  Intro post
+    url(r'^posts/$', views.intro_page, name='intro_page'),
+    url(r'^posts/create/$', views.add_intro, name='add_intro'),
+    url(r'^posts/(?P<pk>\d+)/update/$', views.update_intro, name='update_intro'),
+    url(r'^posts/(?P<pk>\d+)/delete/$', views.book_delete, name='book_delete'),
+    #  calender and events
+    url(r'^calender/$', views.calender_page, name='calender_page'),
+    url(r'^calender/add/$', views.new_event, name='event_add'),
+    url(r'^calender/(?P<pk>\d+)/edit/$', views.save_event, name='event_edit'),
+    url(r'^calender/(?P<pk>\d+)/delete/$', views.delete_event, name='event_delete'),
 ]

@@ -1,0 +1,96 @@
+{% load widget_tweaks %}
+{{ form.media }}
+
+<style>
+    textarea {
+        resize: none;
+    }
+</style>
+<form method="post" data-url="" enctype="multipart/form-data" class="js-news-create-form">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h4 class="modal-title">Add a new article to News</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <strong class="form-url"></strong>
+        <div class="form-group  {% if field.errors %} bg-danger{% endif %}">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" for="{{ form.news_title.id_for_label }}">Title</span>
+                        </div>
+                        {{ form.news_title|add_class:'form-control' }}
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" for="{{ form.news_time.id_for_label }}">Time:</span>
+                        </div>
+                        {{ form.news_time|add_class:'form-control' }}
+                    </div>
+
+
+                    <label for="{{ form.news_images.id_for_label }}">Cover image:</label>
+                    {{ form.news_images|add_class:'form-control' }}
+                    <div class="invalid-feedback" id="PostImageInput-errors">
+                        {{ form.errors }}
+                    </div>
+                    <div class="col img-thumbnail text-center my-2">
+                        {% if image.news_images %}
+                            <img id="img_id" src="{{ image.news_images.url }}" alt="image" class="img-thumbnail">
+                        {% else %}
+                            <img id="img_id" alt="image" class="img-thumbnail" width="240px">
+                        {% endif %}
+                    </div>
+
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" for="{{ form.news_header.id_for_label }}">Header:</span>
+                        </div>
+                        {{ form.news_header|add_class:'form-control'|attr:'rows' }}
+                    </div>
+                    {{ form.news_header.h }}
+                    {{ form.news_body|add_class:'form-control' }}
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Create book</button>
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+        $("#{{ form.news_time.auto_id }}").datetimepicker({
+            dateFormat: 'YYYY-mm-dd',
+            format: 'Y-m-d H:i:s',
+        });
+
+        $("#id_news_images").change(function () {
+            upload_img(this)
+        });
+
+        function upload_img(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img_id').attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+    });
+</script>

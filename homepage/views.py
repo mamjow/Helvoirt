@@ -1,39 +1,38 @@
 from django.shortcuts import render
 import os
-#from .forms import ContactUsForm
-#from .forms import NewPost
-from .models import BlogPost
-from .models import WebCategory
+from .models import News
+from .models import Sponsor
 from .models import HomeAdv
+from management.models import Events
 from django.contrib import messages
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 
-BLOG_POST_PER_PAGE = 6
+NEWS_POST_PER_PAGE = 6
 
 
 def home(request):
     template = "content/homepage.html"
-    blog_post = BlogPost.objects.all().order_by('post_time').reverse()
-    qs = blog_post.filter()
-    eqs = blog_post.filter()
-    ms = WebCategory.objects.all()
+    news_post = News.objects.all().order_by('news_time').reverse()
+    qN = news_post.filter()
+    eqs = Events.objects.all()
+    ms = Sponsor.objects.all()
     path = "static/image"  # insert the path to your directory
     img_list = os.listdir(path)
     adv_gif = HomeAdv.objects.all()
 
     # Pagination
     page = request.GET.get('page', 1)
-    blog_post_paginator = Paginator(qs, BLOG_POST_PER_PAGE)
+    news_post_paginator = Paginator(qN, NEWS_POST_PER_PAGE)
     try:
-        qs = blog_post_paginator.page(page)
+        qN = news_post_paginator.page(page)
     except PageNotAnInteger:
-        qs = blog_post_paginator(BLOG_POST_PER_PAGE)
+        qN = news_post_paginator(NEWS_POST_PER_PAGE)
     except EmptyPage:
-        qs = blog_post_paginator(qs.paginator.num_pages)
+        qN = news_post_paginator(qN.paginator.num_pages)
 
     context = {
         'event_list': eqs,
-        'object_list': qs,
+        'object_list': qN,
         'menu_list': ms,
         'menuactive': 'Home',
         'images': img_list,
@@ -44,7 +43,7 @@ def home(request):
 
 def post_details(request, slug=None):
     template = "content/post-card-full.html"
-    qs = BlogPost.objects.get(slug=slug)
+    qs = News.objects.get(slug=slug)
     context = {
         'post_details': qs,
     }
@@ -52,10 +51,10 @@ def post_details(request, slug=None):
 
 
 def contact(request):
-    ms = WebCategory.objects.all()
+    ms = Sponsor.objects.all()
     if request.method == 'POST':
 
-        form = ContactUsForm(request.POST or None)
+        form = Contact(request.POST or None)
         if form.is_valid():
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']

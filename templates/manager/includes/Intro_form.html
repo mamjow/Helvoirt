@@ -1,0 +1,111 @@
+{% load widget_tweaks %}
+{{ form.media }}
+
+<style>
+    textarea {
+        resize: none;
+    }
+</style>
+<form method="post" data-url="" enctype="multipart/form-data" class="js-intro-create-form">
+    {% csrf_token %}
+    <div class="modal-header">
+        <h4 class="modal-title">Add a new article to News</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <strong class="form-url"></strong>
+        <div class="form-group  {% if field.errors %} bg-danger{% endif %}">
+            <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <div class="input-group ">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" for="{{ form.post_title.id_for_label }}">Title</span>
+                        </div>
+                        {{ form.post_title|add_class:'form-control' }}
+                    </div>
+
+
+                    <div class=" mt-3">
+                        {{ form.post_images|add_class:'form-control' }}
+                        <label for="{{ form.post_images.id_for_label }}">image:</label><br>
+                        {% if image.news_images %}
+
+                            <img id="img_id" src="{{ image.news_images.url }}" alt="image" class="img-thumbnail">
+                        {% else %}
+                            <img id="img_id" alt="image" class="img-thumbnail">
+                        {% endif %}
+                        <div class="invalid-feedback" id="PostImageInput-errors">
+                            {{ form.errors }}
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                <span class="input-group-text"
+                                      for="{{ form.post_sponsor.id_for_label }}">Sponsor:</span>
+                                </div>
+                                {{ form.post_sponsor|add_class:'form-control' }}
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <div class="input-group ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" for="{{ form.post_type.id_for_label }}">Type:</span>
+                                </div>
+                                {{ form.post_type|add_class:'form-control' }}
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" for="{{ form.post_header.id_for_label }}">Header:</span>
+                        </div>
+                        {{ form.post_header|add_class:'form-control'|attr:'rows' }}
+                    </div>
+
+                    {{ form.post_body|add_class:'form-control' }}
+                </div>
+            </div>
+            {% for error in field.errors %}
+                <p class="help-block">{{ error }}</p>
+            {% endfor %}
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Create book</button>
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+
+
+        $('#{{ form.post_images.id_for_label }}').change(function () {
+            upload_img(this)
+        });
+
+        function upload_img(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#img_id').attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+    });
+</script>
+

@@ -7,6 +7,47 @@
     </style>
 {% endblock %}
 
+<!-- THE MODAL WE WILL BE USING -->
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class="form-group{% if field.errors %} has-error{% endif %}">
+                            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                            {% render_field field class="form-control" %}
+                            {% for error in field.errors %}
+                                <p class="help-block">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Create book</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 {% block adminmainpanel %}
     <div class="col">
         <table class="table table-striped table-bordered table-hover" id="post-table" style="width:100%">
@@ -32,7 +73,7 @@
                         <div class="btn-group">
                             <button type="button"
                                     class="btn btn-warning btn-block"
-                                    onclick="window.location.href = '{% url 'post_update' object.id %}';"
+                                    onclick="window.location.href = '{% url 'event_edit' object.id %}';"
                             >
                                 <a>
                                     <i class="fas fa-pen"></i>
@@ -41,12 +82,14 @@
                             <button type="button"
                                     class="btn btn-danger open-modal"
                                     id="OpenDeleteModal"
+                                    onclick="window.location.href = '{% url 'event_delete' object.id %}';"
                                     data-toggle="modal" data-target="#confirmDeleteModal"
                                     data-whatever="{{ object.post_title }}"
-                                    data-formurl="{% url 'post_delete' object.id %}"
+                                    data-formurl="{% url 'event_delete' object.id %}"
                             >
                                 <i class="fas fa-trash-alt"></i>
                             </button>
+
                         </div>
                     </td>
 
@@ -62,10 +105,9 @@
 {% endblock %}
 {% block adminsidepanel %}
     <div class="col-lg-3 col-md-6">
-        <form action="/your-name/" method="post">
+        <form action="" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-
-            {% for field in form %}
+            {% for field in eventform %}
                 <div class="form-group{% if field.errors %} has-error{% endif %}">
                     <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                     {% render_field field class="form-control" %}
@@ -74,10 +116,7 @@
                     {% endfor %}
                 </div>
             {% endfor %}
-
-
-
-            <input type="submit" value="Submit">
+            <input class="btn btn-primary" type="submit" value="Submit">
         </form>
     </div>
     <div class="col-lg-3 col-md-6 w-100 bg-warning">
@@ -86,8 +125,10 @@
     height: auto">
     </div>
     <script type="text/javascript">
+
+
         $("#id_event_image").change(function () {
-            upload_img(this)
+            upload_img(this);
         });
 
         function upload_img(input) {

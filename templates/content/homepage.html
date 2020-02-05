@@ -16,10 +16,9 @@
 {% endblock %}
 <!-------------------- Content  ----------->
 {% block content %}
-    <div class="col-12">
         {% include 'content/post-card.html' %}
         {% include 'content/snippet/blog_post_pagination.html' with blog_posts=object_list %}
-    </div>
+
 {% endblock %}
 <!-------------------- Adv  ----------->
 {#{% block adver %}#}
