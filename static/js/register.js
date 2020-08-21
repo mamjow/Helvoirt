@@ -23,12 +23,13 @@ $(document).ready(function () {
             var form = $(this).closest("form");
 
             $.ajax({
+                type: "POST",
                 url: form.attr("data-validate-existing-username-url"),
                 data: form.serialize(),
                 dataType: 'json',
                 success: function () {
                     UserError.css('display', 'none');
-                    console.log('vlidate shod', NewUserEmail, NewUserName, password2, password1);
+                    // console.log('vlidate shod', NewUserEmail, NewUserName, password2, password1);
                     $.ajax({
                         type: "POST", // GET or POST
                         url: '/signup/',
@@ -40,9 +41,9 @@ $(document).ready(function () {
                             'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val(),
                         },
                         success: function (data) {
-                            console.log(data.message);
+                            // console.log(data.message);
                             if (data['message'] == "Success") {
-                                console.log('berim login ?');
+                                // console.log('berim login ?');
                                 $.ajax({
                                     type: "POST",
                                     url: '/login/',
@@ -55,7 +56,7 @@ $(document).ready(function () {
                                         register_button.html('ingelogged');
                                         register_icon.removeClass('fa-spinner fa-spin').addClass(' fa-user-plus');
                                         $('#SignUpModal').modal('hide');
-                                        console.log(data);
+                                        // console.log(data);
                                         location.reload();
                                     },
                                     error: function () {
@@ -85,7 +86,7 @@ $(document).ready(function () {
 
                         }, /* end of Success */
                         error: function (data) {
-                            console.log(data.message);
+                            // console.log(data.message);
                             var ajax_err = $('#register-errors');
                             ajax_err.css('display', 'block');
                             ajax_err.find('span').html(data.message)
@@ -126,6 +127,7 @@ $(document).ready(function () {
             url: form.attr("data-validate-existing-username-url"),
             data: form.serialize(),
             dataType: 'json',
+            type: "POST",
             success: function () {
                 {
                     $('#username-errors').css('display', 'none');

@@ -24,7 +24,7 @@ SECRET_KEY = 'mw&-uo60_#+^%@+7p85l&zm$3kewq3l4j4c-)pmzj@bq5o&=u1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -35,9 +35,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'homepage.apps.HomepageConfig',
-    'accounts.apps.AccountsConfig',
-    'management.apps.ManagementConfig',
+    'homepage',
+    'accounts',
     'mathfilters',
     'rest_framework',
     'ckeditor',
@@ -81,9 +80,17 @@ WSGI_APPLICATION = 'Helvoirt.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'helvoirt_db',
+        'USER': 'postgres',
+        'PASSWORD': 'mjm2k4',
+        'HOST': 'localhost',
+        'PORT': '5432'
     }
 }
 

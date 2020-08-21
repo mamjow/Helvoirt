@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'home_base.html' %}
 {% block style %}
     <script>
 
@@ -16,9 +16,22 @@
 {% endblock %}
 <!-------------------- Content  ----------->
 {% block content %}
-        {% include 'content/post-card.html' %}
-        {% include 'content/snippet/blog_post_pagination.html' with blog_posts=object_list %}
+    {% include 'content/post-card.html' %}
+{% endblock %}
 
+{% block page_info %}
+    {% include 'content/snippet/blog_post_pagination.html' with blog_posts=object_list %}
+{% endblock %}
+
+{% block friends %}
+    {% for partner in partner_list %}
+        <div>
+            {{ partner.partner_name }}
+            {{ partner.short_summery }}
+            <img src="{{ partner.partner_logo.url }}" style="width:100%;height:100%;object-fit:cover">
+            {{ partner.partner_logo }}
+        </div>
+    {% endfor %}
 {% endblock %}
 <!-------------------- Adv  ----------->
 {#{% block adver %}#}

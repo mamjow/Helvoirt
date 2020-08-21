@@ -1,55 +1,54 @@
-<div class="row my-2">
+<div class="d-flex flex-column" id="style-1" style="overflow-y: scroll; height: 65vh; overflow-x: hidden; ">
 
     {% for object in object_list %}
-        <div class="col-12 p-1">
 
-            <div class="card text-white" style="background-color: #05B183">
 
-                <div class="card-header cardpostal-text" onclick="window.location.href = '{{ object.slug }}';"
-                     style="cursor: pointer">
+        <div class="card text-white mb-1 mr-1" style="background-color: #5e5e5e;border-radius: 7px;
+cursor: pointer; "
+             onclick="window.location.href = '{% url 'post_details' slug=object.slug %}';">
 
-                    <p class="card-title h4" style="font-weight: bold">
-                        {{ object.news_title }}
-                    </p>
+            <div class="card-header cardpostal-text"
+                 onclick="window.location.href = '{% url 'post_details' slug=object.slug %}';"
+                 style="cursor: pointer">
 
-                </div>
+                <p class="card-title h4" style="font-weight: bold">
+                    {{ object.post_title }}
+                </p>
 
-                {% if object.news_images %}
-                    <img class="card-img-top cardpostal  "
-                         src="{{ object.news_images.url }} "
-                         alt="Card image cap"
-                         style="cursor: pointer; "
-                         onclick="window.location.href = '{{ object.slug }}';">
-                {% else %}
-                    <img class="card-img-top cardpostal "
-                         src="/static/post-default.jpg"
-                         alt="Card image cap"
-                         style="cursor: pointer"
-                         onclick="window.location.href = '{{ object.slug }}';">
+            </div>
+
+
+            <img class="card-img-top cardpostal  "
+                    {% if object.post_image %}
+                 src="{{ object.post_image.url }} "
+                    {% else %}
+                 src="/static/post-default.jpg"
+                    {% endif %}
+                 alt="Card image cap"
+            >
+
+            <div class="card-footer p-0 pl-1">
+                <small>{{ object.post_available_date|date:"F d, Y" }}
+                </small>
+
+                {% if user.is_staff %}
+                    <div class="dropdown float-right">
+                        <button class="dropbtn"><i class="fas fa-ellipsis-h"></i></button>
+                        <div class="dropdown-content">
+
+                            <a class="px-2 text-danger " href="#"><i class="fas fa-edit"></i>
+                            </a>
+                            <a class="px-2 text-danger " href="{% url 'delete_news' object.post_id %}"><i
+                                    class="fas fa-trash-alt"></i>
+                            </a>
+
+                        </div>
+                    </div>
                 {% endif %}
 
-                <div class="card-footer  p-1  mt-auto">
-                    <small>{{ object.news_time|date:"F d, Y" }}
-                    </small>
-
-                    {% if user.is_staff %}
-                        <div class="dropdown float-right">
-                            <button class="dropbtn"><i class="fas fa-ellipsis-h"></i></button>
-                            <div class="dropdown-content">
-
-                                <a class="px-2 text-danger " href="#"><i class="fas fa-edit"></i>
-                                </a>
-                                <a class="px-2 text-danger " href="{% url 'delete_news' object.id %}"><i
-                                        class="fas fa-trash-alt"></i>
-                                </a>
-
-                            </div>
-                        </div>
-                    {% endif %}
-
-                </div>
             </div>
         </div>
 
-{% endfor %}
+
+    {% endfor %}
 </div>

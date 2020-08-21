@@ -1,5 +1,5 @@
 {% block slider %}
-    <div id="homeslider" class="carousel slide " data-ride="carousel"
+    <div id="homeslider" class="carousel slide" data-ride="carousel"
          style="margin-right: -15px; margin-left: -15px" data-plugin-options="{'mergeFit' : true}">
         <ol class="carousel-indicators">
             {% for image in images %}
@@ -16,14 +16,14 @@
                 {% if  forloop.first %}
                     <div class="carousel-item  active">
                         <img src='/static/image/{{ image }}' class="d-block  " style="width:100%;
-                                    height:300px;
+                                    height:30vh;
                                     object-fit:cover;"
                              alt="...">
                     </div>
                 {% else %}
                     <div class="carousel-item ">
                         <img src='/static/image/{{ image }}' class="d-block " style="width:100%;
-                                    height:300px;
+                                    height:30vh;
                                     object-fit:cover;"
                              alt="...">
                     </div>

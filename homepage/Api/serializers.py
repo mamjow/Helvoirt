@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from homepage.models import News
+from homepage.models import Post
 
 
 class BlogPostSerializer(serializers.ModelSerializer):
     class Meta:
-        model = News
+        model = Post
         fields = ('post_title', 'post_Body', 'post_time', 'pk')

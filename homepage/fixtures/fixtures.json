@@ -1,0 +1,10 @@
+[
+  {
+    "model": "homepage.Section",
+    "pk": 1,
+    "fields": {
+      "section_name": "HelvoirThuis",
+      "section_summery": "The root section"
+    }
+  }
+]

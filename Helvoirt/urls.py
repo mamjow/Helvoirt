@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from homepage.Api.view import BlogListAPI
 from accounts.views import login_user
 from accounts.views import signup_user
-from management.views import TemplateView
+from homepage.views import TemplateView
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
@@ -29,9 +29,9 @@ urlpatterns = [
                   url(r'^login/$', login_user, name='login'),
                   url(r'^signup/$', signup_user, name='signupuser'),
                   url('', include('homepage.urls')),
-                  url('home', include('homepage.urls'), name='home-blog'),
+                  # url('home/', include('homepage.urls'), name='home-blog'),
                   path('accounts/', include('accounts.urls')),
-                  path('panel/', include('management.urls')),
+                  # path('homepage/', include('homepage.urls')),
                   path('accounts/', include('django.contrib.auth.urls')),
                   path('home/api/', BlogListAPI.as_view()),
 

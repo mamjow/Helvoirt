@@ -18,5 +18,11 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="helvoirt_db@localhost" uuid="06992ed1-80b2-48ba-bdbb-3de997dff8af">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/helvoirt_db</jdbc-url>
+    </data-source>
   </component>
 </project>

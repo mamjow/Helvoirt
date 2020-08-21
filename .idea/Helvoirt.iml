@@ -15,10 +15,6 @@
       <configuration>
         <option name="rootFolder" value="" />
         <option name="sdkFolder" value="" />
-        <option name="templatesFolder" value="" />
-        <option name="oauth2" value="false" />
-        <option name="deployConfigured" value="false" />
-        <option name="saveCredentials" value="false" />
       </configuration>
     </facet>
   </component>

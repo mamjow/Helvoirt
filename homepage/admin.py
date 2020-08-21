@@ -1,24 +1,26 @@
 from django.contrib import admin
-from .models import News
+from .models import Post
 from .models import Contact
-from .models import Sponsor
-from .models import HomeAdv
-from .models import IntroType
+from .models import Partnership
+from .models import Advertisement
+from .models import Events
+from .models import Section
+
 
 # Register your models here.
 
-class BlogpostView(admin.ModelAdmin):
+class BlogPostView(admin.ModelAdmin):
     list_display = [
-        'news_title',
-        'news_time',
-        'news_author',
+        'post_title',
+        'post_available_date',
+        'post_author',
     ]
-    search_fields = ('news_title',)
-    list_filter = ('news_author',)
-    prepopulated_fields = {'slug': ('news_title',)}
+    search_fields = ('post_title',)
+    list_filter = ('post_author',)
+    prepopulated_fields = {'slug': ('post_title',)}
 
 
-class contactView(admin.ModelAdmin):
+class ContactView(admin.ModelAdmin):
     list_display = [
         'Name',
         'ContactTime',
@@ -27,16 +29,18 @@ class contactView(admin.ModelAdmin):
         'Subject'
     ]
 
-class menutabView(admin.ModelAdmin):
+
+class MenuTabView(admin.ModelAdmin):
     list_display = [
-        'Title',
+        'partner_name',
     ]
 
 
-admin.site.register(Contact, contactView)
-admin.site.register(News, BlogpostView)
-admin.site.register(Sponsor, menutabView)
-admin.site.register(HomeAdv)
-admin.site.register(IntroType)
+admin.site.register(Contact, ContactView)
+admin.site.register(Post, BlogPostView)
+admin.site.register(Partnership, MenuTabView)
+admin.site.register(Advertisement)
+admin.site.register(Events)
+admin.site.register(Section)
 
 # Register your models here.

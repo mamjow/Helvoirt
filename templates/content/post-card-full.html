@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{#{% extends 'home_base.html' %}#}
 {% load static %}
 
 <!DOCTYPE html>
@@ -12,18 +12,18 @@
 {% block content %}
     <div class="container-fluid mt-2 mb-1 rounded bg-white">
         <div class="row">
-            {% if post_details.news_images %}
-            <div class="col-7">
-                <h2 class="pt-4"> {{ post_details.news_title }}</h2>
-                <p> {{ post_details.news_body | safe }}</p>
-            </div>
-            <div class="col-5 p-1">
-                <img class="col-12 justify-content-center" src="{{ post_details.news_images.url }}">
-            </div>
+            {% if post_details.post_image %}
+                <div class="col-7">
+                    <h2 class="pt-4"> {{ post_details.post_title }}</h2>
+                    <p> {{ post_details.post_body | safe }}</p>
+                </div>
+                <div class="col-5 p-1">
+                    <img class="col-12 justify-content-center" src="{{ post_details.post_image.url }}">
+                </div>
             {% else %}
                 <div class="col-12">
-                    <h2 class="pt-4"> {{ post_details.news_title }}</h2>
-                    <p> {{ post_details.news_body | safe }}</p>
+                    <h2 class="pt-4"> {{ post_details.post_title }}</h2>
+                    <p> {{ post_details.post_body | safe }}</p>
                 </div>
             {% endif %}
         </div>
@@ -31,8 +31,8 @@
     </div>
     <div class="card-body border bg-light rounded p-1 ">
         <blockquote class="blockquote">
-            <footer class="blockquote-footer">{{ post_details.news_author }} <cite
-                    title="Source Title">- {{ post_details.news_time|date:"F d, Y" }}</cite>
+            <footer class="blockquote-footer">{{ post_details.post_author }} <cite
+                    title="Source Title">- {{ post_details.post_available_date|date:"F d, Y" }}</cite>
             </footer>
         </blockquote>
     </div>

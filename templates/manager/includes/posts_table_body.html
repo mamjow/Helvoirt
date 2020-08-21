@@ -1,14 +1,14 @@
-{% for object in news %}
+{% for object in article %}
     <tr>
-        <td>{{ object.news_title }}</td>
-        <td>{{ object.news_time|date:'Y-m-d' }}</td>
-        <td>{{ object.news_author }}</td>
+        <td>{{ object.post_title }}</td>
+        <td>{{ object.post_available_date|date:'Y-m-d' }}</td>
+        <td>{{ object.post_author }}</td>
         <td style="width: 150px">
             <div class="btn-group">
                 <button type="button"
                         class="btn btn-warning btn-block js-update-news"
                         id="OpenEditNews"
-                        data-formurl="{% url  'update_news' object.id %}"
+                        data-formurl="{% url  'update_news' object.post_id %}"
                 >
                     <a>
                         <i class="fas fa-pen"></i>
@@ -18,8 +18,8 @@
                         class="btn btn-danger open-modal"
                         id="OpenDeleteModal"
                         data-toggle="modal" data-target="#confirmDeleteModal"
-                        data-whatever="{{ object.news_title }}"
-                        data-formurl="{% url 'delete_news' object.id %}"
+                        data-whatever="{{ object.post_title }}"
+                        data-formurl="{% url 'delete_news' object.post_id %}"
                 >
                     <i class="fas fa-trash-alt"></i>
                 </button>

@@ -4,8 +4,8 @@
 {% block adminmainpanel %}
     <div class="col-12">
         <button type="button" class="btn btn-primary my-2 btn-block"
-                id="OpenAddNews"
-                data-formurl="{% url 'add_news' %}"
+                id="OpenAddArticle"
+                data-formurl="{% url 'add_article' %}"
         >
             <i class="fas fa-plus mx-1"> </i>
             New article
@@ -20,7 +20,7 @@
             </tr>
             </thead>
             <tbody>
-            {% include 'manager/includes/news_table_body.html' %}
+            {% include 'manager/includes/posts_table_body.html' %}
             </tbody>
         </table>
     </div>
@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    {% include 'manager/includes/news_delete.html' %}
+    {% include 'manager/includes/posts_delete.html' %}
 {% endblock %}
 
 {% block adminsidepanel %}

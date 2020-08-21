@@ -69,7 +69,7 @@ $(document).ready(function () {
     /* Binding */
 
     // Create book
-    $("#OpenAddNews").click(loadNewsForm);
+    $("#OpenAddArticle").click(loadNewsForm);
 
     //edit
     $("#data-table").on("click", ".js-update-news", loadNewsForm);

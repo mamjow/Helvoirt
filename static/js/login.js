@@ -25,6 +25,7 @@ $(document).ready(function () {
             url: form.attr("data-validate-username-url"),
             data: form.serialize(),
             dataType: 'json',
+            type: "POST",
             success: function (response) {
                 if (response.message == "username") {
 

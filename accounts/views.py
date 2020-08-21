@@ -51,8 +51,8 @@ def signup_user(request):
 
 
 def validate_username(request):
-    username = request.GET.get('user_name', None)
-    password = request.GET.get('user_password', None)
+    username = request.POST.get('user_name', None)
+    password = request.POST.get('user_password', None)
     if User.objects.filter(username=username).exists():
         user = authenticate(username=username, password=password)
         if user is None:
@@ -63,7 +63,7 @@ def validate_username(request):
 
 
 def validate_existingusername(request):
-    username = request.GET.get('NewUserName', None)
+    username = request.POST.get('NewUserName', None)
     if User.objects.filter(username=username).exists():
         return JsonResponse({"success": False}, status=400)
 
