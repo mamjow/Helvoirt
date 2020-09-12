@@ -237,3 +237,6 @@ homepage/*.xml
 
 # DB user information
 /Helvoirt/Dbconf.py
+
+# media
+/media/*
