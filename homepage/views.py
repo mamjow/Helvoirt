@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.shortcuts import render, render_to_response, redirect
 import os
 
@@ -28,7 +30,8 @@ def dashboard(request):
 
 def home(request):
     template = "content/homepage.html"
-    object_all_post = Post.objects.all().order_by('post_available_date').reverse()
+    object_all_post = Post.objects.all().filter(post_available_date__date__lt=date.today()).order_by(
+        'post_available_date').reverse()
     qN = object_all_post.filter()
     eqs = Events.objects.all()
     ms = Partnership.objects.all()
@@ -55,7 +58,7 @@ def home(request):
         'menuactive': 'Home',
         'images': img_list,
         'adv': adv_gif,
-        'sec_list': list_sections
+        'sec_list': list_sections.filter(section_root=None).filter(section_visible=True)
     }
     return render(request, template, context)
 

@@ -1,4 +1,4 @@
-<div class="d-flex flex-column" id="style-1" style="overflow-y: scroll; height: 65vh; overflow-x: hidden; ">
+<div class="d-flex flex-column" id="style-1" style="overflow-y: scroll; height: 64vh; overflow-x: hidden; ">
 
     {% for object in object_list %}
 
@@ -30,6 +30,8 @@ cursor: pointer; "
             <div class="card-footer p-0 pl-1">
                 <small>{{ object.post_available_date|date:"F d, Y" }}
                 </small>
+                <small>{{ object.post_author }}
+                </small>
 
                 {% if user.is_staff %}
                     <div class="dropdown float-right">
@@ -52,3 +54,75 @@ cursor: pointer; "
 
     {% endfor %}
 </div>
+
+{# NEW CARD#}
+
+{#<div class="d-flex flex-wrap"  id="style-1" style="overflow-y: scroll; height: 65vh; overflow-x: hidden; " ">#}
+{#    {% for object in object_list %}#}
+{#        <div class="wrap normal">#}
+{#            <div class="wrapper">#}
+{#                <div class="date">29<span>June</span></div>#}
+{#                <header>#}
+{#                    <figure>#}
+{#                                    <img class="card-img-top cardpostal  "#}
+{#                                            {% if object.post_image %}#}
+{#                                         src="{{ object.post_image.url }} "#}
+{#                                            {% else %}#}
+{#                                         src="/static/post-default.jpg"#}
+{#                                            {% endif %}#}
+{#                                         alt="Card image cap"#}
+{#                                    >#}
+{#                    </figure>#}
+{#                    <div class="tag">PHOTOS</div>#}
+{#                </header>#}
+{#                <article class="content">#}
+{#                    <h1>City Lights In New York</h1>#}
+{#                    <h3>The city that never sleeps</h3>#}
+{#                    <p>New York, the largest city in the U.S, is an architechtural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrappers.</p>#}
+{#                    <footer>#}
+{#                        <span>&#9900; 6 mins ago</span>#}
+{#                        <span><img src="https://cdn0.iconfinder.com/data/icons/seo-smart-pack/128/grey_new_seo-17-512.png" width="20px" height="20px">39 comments</span>#}
+{#                </article>#}
+{#            </div>#}
+{#        </div>#}
+{#    {% endfor %}#}
+{#</div>#}
+
+
+{#<div class="d-flex flex-row">#}
+{##}
+{#    {% for object in object_list %}#}
+{##}
+{#        <div class="card">#}
+{#            <img    class="card-image"              {% if object.post_image %}#}
+{#                src="{{ object.post_image.url }} "#}
+{#            {% else %}#}
+{#                src="/static/post-default.jpg"#}
+{#            {% endif %} alt="" />#}
+{#            <div class="card-meta">#}
+{#                <span class="tag">Photos</span>#}
+{#                <span class="date"><span>27 <em>Mar</em></span></span>#}
+{#            </div>#}
+{#            <div class="card-details">#}
+{#                <h2>{{ object.post_title }}</h2>#}
+{#                <h3>{{ object.post_header }}</h3>#}
+{#                <p>{{ object.post_body }}</p>#}
+{#                <div class="post-meta">#}
+{#      <span class="timestamp">#}
+{#        <i class="fa fa-clock-o"></i>#}
+{#        {{ object.post_title }}#}
+{#      </span>#}
+{#                    <span class="comments">#}
+{#        <i class="fa fa-comments"></i>#}
+{#        <a href="#">39 comments</a>#}
+{#      </span>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{##}
+{##}
+{##}
+{##}
+{#    {% endfor %}#}
+{#</div>#}

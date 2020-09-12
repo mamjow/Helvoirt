@@ -42,7 +42,8 @@
 <body style="font-family: Roboto;
         background-image: url({% static 'gray_sand.png' %});
         background-repeat: repeat;
-        overflow: hidden;">
+        {#overflow: hidden;#}
+        ">
 
 {#{% if user.is_staff %}#}
 {#<div class="container position-fixed" style="z-index: 2">#}
@@ -83,7 +84,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-8 col-md-12 mt-2 " style="height: 65vh">
+            <div class="col-lg-8 col-md-12 mt-2 " style="height: 64vh">
                 <div class="row">
                     {% block content %}
                     {% endblock %}
@@ -95,11 +96,15 @@
                 </div>
             </div>
 
-            <div class="col-lg-4 pl-2 pr-0" style="height: 65vh">
-                {% block events %}
-                {% endblock %}
-                {% block friends %}
-                {% endblock %}
+            <div class="col-lg-4 pl-2 pr-0" style="height: 64vh">
+                <div class="d-flex flex-column">
+                    {% block events %}
+                    {% endblock %}
+                    {% block friends %}
+                    {% endblock %}
+                    {% block contact %}
+                    {% endblock %}
+                </div>
             </div>
         </div>
     </div>

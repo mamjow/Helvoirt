@@ -1,5 +1,8 @@
 from django.conf.urls import url
 from . import views
+from .Api import views as api_view
+from django.urls import path
+
 from django.views.generic import TemplateView
 
 urlpatterns = [

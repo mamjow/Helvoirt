@@ -19,66 +19,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd561a11-8182-4a4a-95fc-227f3d0aa33a" name="Default Changelist" comment="modal intro and news">
-      <change afterPath="$PROJECT_DIR$/homepage/fixtures/fixtures.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/homepage/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/backg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/gray_sand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/content/menu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/content/section.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/home_base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/section_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Helvoirt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Helvoirt.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/8af8ee14-1113-41bf-9f16-8a05ecae99d4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/8af8ee14-1113-41bf-9f16-8a05ecae99d4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Google_App_Engine_SDK.xml" afterDir="false" />
+    <list default="true" id="bd561a11-8182-4a4a-95fc-227f3d0aa33a" name="Default Changelist" comment="change db , redesign models">
+      <change afterPath="$PROJECT_DIR$/Helvoirt/Dbconf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/Api/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/Api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/Api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/accounts/Api/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homepage/Api/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/homepage/Api/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/123.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Helvoirt/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Helvoirt/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Helvoirt/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Helvoirt/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homepage/Api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/Api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/Api/view.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/Api/view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homepage/Api/view.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/homepage/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/homepage/migrations/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/homepage/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homepage/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homepage/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/homepage/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/management/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/management/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/management/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/management/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/management/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/management/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/management/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/management/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/master.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticroot/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticroot/static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticroot/static/deployment/admin/js/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticroot/static/deployment/admin/js/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticroot/static/deployment/rest_framework/docs/js/highlight.pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticroot/static/deployment/rest_framework/docs/js/highlight.pack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/staticroot/static/rest_framework/docs/js/highlight.pack.js" beforeDir="false" afterPath="$PROJECT_DIR$/staticroot/static/rest_framework/docs/js/highlight.pack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/content/contactus.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content/contactus.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/content/events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content/events.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/content/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/content/post-card-full.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content/post-card-full.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/content/post-card.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content/post-card.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/content/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content/slider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/content/snippet/blog_post_pagination.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content/snippet/blog_post_pagination.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/includes/news_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manager/includes/posts_delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/includes/news_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manager/includes/posts_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/includes/news_table_body.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manager/includes/posts_table_body.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/news_manager.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manager/posts_manager.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/manager/panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/manager/panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +57,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -176,26 +142,27 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/content" />
+    <property name="database.data.extractors.current.id" value="Comma-separated (CSV)_id" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/homepage/Api" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\templates\content" />
-      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\templates" />
-      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\homepage" />
-      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\accounts" />
-      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\management" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\static" />
       <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\static\upload" />
       <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\templates\manager" />
       <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\media" />
       <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\templates\content" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\homepage\Api" />
+      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\templates\content" />
+      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\templates" />
+      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\homepage" />
+      <recent name="C:\Users\mjmos\PycharmProjects\Helvoirt\accounts" />
     </key>
   </component>
   <component name="RunManager">
@@ -242,7 +209,24 @@
       <workItem from="1597656022658" duration="27214000" />
       <workItem from="1597829805829" duration="12031000" />
       <workItem from="1597919861127" duration="17446000" />
-      <workItem from="1598005892577" duration="2799000" />
+      <workItem from="1598005892577" duration="20966000" />
+      <workItem from="1598090864170" duration="22437000" />
+      <workItem from="1598431493610" duration="8737000" />
+      <workItem from="1598523274745" duration="3352000" />
+      <workItem from="1598617515979" duration="1693000" />
+      <workItem from="1598701840726" duration="1824000" />
+      <workItem from="1598799730932" duration="2655000" />
+      <workItem from="1598883620539" duration="6539000" />
+      <workItem from="1599043088444" duration="3001000" />
+      <workItem from="1599140247781" duration="269000" />
+      <workItem from="1599217229187" duration="3750000" />
+      <workItem from="1599302382743" duration="19432000" />
+      <workItem from="1599410565586" duration="1449000" />
+      <workItem from="1599488179924" duration="1237000" />
+      <workItem from="1599648734187" duration="2512000" />
+      <workItem from="1599728145029" duration="2347000" />
+      <workItem from="1599827782071" duration="1500000" />
+      <workItem from="1599899564356" duration="1470000" />
     </task>
     <task id="LOCAL-00001" summary="ltstw">
       <created>1575817202895</created>
@@ -335,17 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1580888594245</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="change db , redesign models">
+      <created>1598012815280</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598012815280</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
@@ -387,7 +369,8 @@
     <MESSAGE value="Pagination and css improve" />
     <MESSAGE value="calender shit" />
     <MESSAGE value="modal intro and news" />
-    <option name="LAST_COMMIT_MESSAGE" value="modal intro and news" />
+    <MESSAGE value="change db , redesign models" />
+    <option name="LAST_COMMIT_MESSAGE" value="change db , redesign models" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -415,22 +398,26 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state width="1165" height="466" key="DebuggerActiveHint/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1597495372667" />
-    <state width="1877" height="216" key="GridCell.Tab.0.bottom" timestamp="1597952343193">
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom" timestamp="1599837588003">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.bottom/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1597952343193" />
-    <state width="1877" height="216" key="GridCell.Tab.0.center" timestamp="1597952343193">
+    <state width="1877" height="213" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1598749462811" />
+    <state width="1877" height="363" key="GridCell.Tab.0.bottom/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1599837588003" />
+    <state width="1877" height="363" key="GridCell.Tab.0.center" timestamp="1599837588003">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.center/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1597952343193" />
-    <state width="1877" height="216" key="GridCell.Tab.0.left" timestamp="1597952343193">
+    <state width="1877" height="213" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1598749462811" />
+    <state width="1877" height="363" key="GridCell.Tab.0.center/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1599837588003" />
+    <state width="1877" height="363" key="GridCell.Tab.0.left" timestamp="1599837588002">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.left/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1597952343193" />
-    <state width="1877" height="216" key="GridCell.Tab.0.right" timestamp="1597952343193">
+    <state width="1877" height="213" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1598749462811" />
+    <state width="1877" height="363" key="GridCell.Tab.0.left/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1599837588002" />
+    <state width="1877" height="363" key="GridCell.Tab.0.right" timestamp="1599837588003">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state width="1877" height="216" key="GridCell.Tab.0.right/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1597952343193" />
+    <state width="1877" height="213" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1598749462811" />
+    <state width="1877" height="363" key="GridCell.Tab.0.right/1920.30.1920.1050/0.30.1920.1050@0.30.1920.1050" timestamp="1599837588003" />
     <state width="1877" height="351" key="GridCell.Tab.1.bottom" timestamp="1597497622504">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

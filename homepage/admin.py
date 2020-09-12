@@ -36,11 +36,21 @@ class MenuTabView(admin.ModelAdmin):
     ]
 
 
+class SectionView(admin.ModelAdmin):
+    list_display = [
+        'section_name',
+        'section_root',
+        'section_order',
+        'section_visible',
+
+    ]
+
+
 admin.site.register(Contact, ContactView)
 admin.site.register(Post, BlogPostView)
 admin.site.register(Partnership, MenuTabView)
 admin.site.register(Advertisement)
 admin.site.register(Events)
-admin.site.register(Section)
+admin.site.register(Section, SectionView)
 
 # Register your models here.

@@ -18,7 +18,7 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.conf import settings
 from django.conf.urls.static import static
-from homepage.Api.view import BlogListAPI
+# from homepage.Api.view import BlogListAPI
 from accounts.views import login_user
 from accounts.views import signup_user
 from homepage.views import TemplateView
@@ -33,11 +33,10 @@ urlpatterns = [
                   path('accounts/', include('accounts.urls')),
                   # path('homepage/', include('homepage.urls')),
                   path('accounts/', include('django.contrib.auth.urls')),
-                  path('home/api/', BlogListAPI.as_view()),
 
                   # REST
-                  # url('api/blog/', include('homepage.api.urls'), 'blog_api'),
-                  # url('api/account/', include('accounts.api.urls'), 'account_api'),
+                  url('api/blog/', include('homepage.Api.urls', 'blog_api')),
+                  url('api/account/', include('accounts.Api.urls', 'account_api')),
 
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

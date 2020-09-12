@@ -3,11 +3,11 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 from django.template.defaultfilters import slugify
-from accounts.models import CustomUser
+from accounts.models import Account
 from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
-user = CustomUser
+user = Account
 
 
 def default_place_pics():
@@ -15,11 +15,11 @@ def default_place_pics():
 
 
 def path_and_rename(instance, filename):
-    upload_to = 'intro-photos/'
+    upload_to = 'post-uploads/'
     ext = filename.split('.')[-1]
     # get filename
     if instance.pk:
-        filename = '{}.{}'.format(instance.pk, ext)
+        filename = '{}-{}.{}'.format(instance.pk, instance.post_title, ext)
     return os.path.join(upload_to, filename)
 
 
@@ -27,6 +27,7 @@ class Section(models.Model):
     section_id = models.AutoField(primary_key=True)
     section_name = models.CharField(max_length=40, unique=True)
     section_icon = models.CharField(max_length=50, null=True)
+    section_visible = models.BooleanField(default=True)
     section_root = models.ForeignKey('self', on_delete=models.SET_NULL, blank=True, null=True)
     section_order = models.IntegerField(null=False, default=0)
     section_summery = models.TextField(null=True)
@@ -47,9 +48,10 @@ class Post(models.Model):
     post_body = RichTextUploadingField(null=True)
     post_expire_date = models.DateTimeField(null=True, blank=True)
     post_available_date = models.DateTimeField(default=timezone.now, null=False)
-    post_image = models.ImageField(upload_to='post-uploads/', null=True, blank=True)
+    post_image = models.ImageField(upload_to=path_and_rename, null=True, blank=True)
     post_section = models.ForeignKey(Section, on_delete=models.CASCADE, default=1)
     post_type = models.CharField(max_length=30, choices=Article_type, default="Nieuws")
+    post_visibility = models.BooleanField(default=True)
     post_author = models.ForeignKey(
         user,
         on_delete=models.CASCADE,
@@ -68,8 +70,9 @@ class Post(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.post_title)
         self.post_header = self.post_title
-        # if self.post_images is None:
-        #     self.post_images = default_place_pics()
+        if not self.post_image:
+            self.post_image = default_place_pics()
+            print(self.post_image)
         super(Post, self).save(*args, **kwargs)
 
 

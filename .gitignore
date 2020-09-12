@@ -233,3 +233,7 @@ homepage/*.xml
 .idea/mongoSettings.xml
 /.idea/*
 .idea/*
+
+
+# DB user information
+/Helvoirt/Dbconf.py

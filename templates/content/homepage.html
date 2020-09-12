@@ -24,14 +24,63 @@
 {% endblock %}
 
 {% block friends %}
-    {% for partner in partner_list %}
-        <div>
-            {{ partner.partner_name }}
-            {{ partner.short_summery }}
-            <img src="{{ partner.partner_logo.url }}" style="width:100%;height:100%;object-fit:cover">
-            {{ partner.partner_logo }}
+
+    <div class="slider" style="margin-top: 15px;">
+        <div class="slide-track">
+
+            {% for partner in partner_list %}
+                {% if partner.partner_logo %}
+                    <div class="slide">
+                        <a href="{{ partner.partner_link }}">
+                            <img src="{{ partner.partner_logo.url }}" height="100" width="250" alt=""/>
+                        </a>
+                    </div>
+
+                {% endif %}
+            {% endfor %}
         </div>
-    {% endfor %}
+    </div>
+
+
+
+
+{% endblock %}
+{% block contact %}
+    <div class="d-flex flex-row sabzi-rang" style="border-radius: 8px; margin-top: 8px;">
+        <div class="social-media-links">
+
+            <div class="social-btn">
+                <a class="social-media-link social-media-link--color" href="#">
+                    <i class="fab fa-facebook fa"></i></a>
+            </div>
+
+            <div class="social-btn">
+                <a class="social-media-link social-media-link--color" href="#">
+                    <i class="fab fa-twitter fa"></i></a>
+            </div>
+
+            <div class="social-btn">
+                <a class="social-media-link social-media-link--color" href="#">
+                    <i class="fab fa-instagram fa"></i></a>
+            </div>
+
+            <div class="social-btn">
+                <a class="social-media-link social-media-link--color" href="#">
+                    <i class="fab fa-youtube fa"></i></a>
+            </div>
+
+
+        </div>
+        <div class="contact-wrapper">
+            <i class="fa fa-map-marker" style="top: -8px;    position: relative;"></i><span>Kloosterstraat 30<br> 5268AC Helvoirt</span>
+
+            <i class="fa fa-phone"></i><span>0685707670 </span>
+
+            <i class="fa fa-envelope"></i><span>Helvoirthuis@helvoirthuis.nl</span>
+        </div>
+
+    </div>
+
 {% endblock %}
 <!-------------------- Adv  ----------->
 {#{% block adver %}#}

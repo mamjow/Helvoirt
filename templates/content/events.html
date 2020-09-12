@@ -1,5 +1,5 @@
 <div id="eventslider" class="carousel slide" data-ride="carousel"
-     style="height: 30vh"
+     style="height: 40vh"
      data-plugin-options="{'mergeFit' : true}">
     <ol class="carousel-indicators" id="my-c-indicators">
         {% for objects in event_list %}
@@ -19,7 +19,7 @@
                 {% if  forloop.first %}
                     <div class="carousel-item active mt-1">
                         <img src='{{ objects.event_image.url }}' class="d-block mt-1" style="width:100%;
-                                    height:30vh;
+                                    height:40vh;
                                     object-fit:cover;
                                     border-radius: 7px;"
                              alt="...">
@@ -33,7 +33,7 @@
                 {% else %}
                     <div class="carousel-item mt-1">
                         <img src='{{ objects.event_image.url }}' class="d-block mt-1" style="width:100%;
-                                    height:30vh;
+                                    height:40vh;
                                     object-fit:cover;
                                     border-radius: 7px;"
                              alt="...">
@@ -58,4 +58,3 @@
 
     </div>
 </div>
-
